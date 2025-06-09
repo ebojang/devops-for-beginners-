@@ -14,6 +14,8 @@ cloud
 ./cloud:
 support
 
+lsof : lists on its standard output file information about files opened  by  processes
+
 **Cd (change directory)**-  navigate through the Linux files and directories 
 
 ==Cd ..== -  takes you one directory up  
