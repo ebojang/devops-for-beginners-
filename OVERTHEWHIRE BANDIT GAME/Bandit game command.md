@@ -16,5 +16,12 @@ run command: grep millionth data.txt
 
 when you use grep -l "word" filename - it searches for the name word in the file. it becomes case insensitive .
 
+LEVEL 8-9 
+The password for the next level is stored in the file **data.txt** and is the only line of text that occurs only once
+
+## Commands you may need to solve this level
+
+grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
 
 

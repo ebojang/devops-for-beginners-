@@ -7,19 +7,24 @@ Linux benefits
 **
 ==**POPULAR LINUX COMMANDS== 
 Linux file system directories 
-**Ls- (list directory) - view the content of a directory 
+**Ls  (list directory) - view the content of a directory 
 ls -R list directories recursively. eg devops/cloud/support
 devops:
 cloud
 ./cloud:
 support
 
-lsof : lists on its standard output file information about files opened  by  processes
+**lso**f : lists on its standard output file information about files opened  by  processes
 
+ **==CD COMMAND==** 
+ 
 **Cd (change directory)**-  navigate through the Linux files and directories 
 
-==Cd ..== -  takes you one directory up  
+**Cd ..** -  takes you one directory up  
+
 **Pwd (print/ present working directory)** – shows your current working directory 
+
+==**MKDIR COMMAND**== 
 
 **Mkdir** (**make a new directory**)-  Mkdir Hello- make a folder or directory call Hello . Directory are mostly highlighted due to our customization of myzsh. also when you click on **ls -l**  directory will have the following **drwx**
 
@@ -35,15 +40,29 @@ to view directory content with space name : **cat "my dev folder"**
 **==rmdir -r==** is used to remove directory that contain folders or files or that have content in them 
 **Touch**- is used to create an empty file. EG touch hello.txt   - a file name hello.txt has been created . it can also be used to update the time stamp of the existing file  :
 
-**Cp** **(copy)** - is used to copy files from the current directory to a different directory  or copy a file . ==example cp test1.txt test1_copy.txt==
-**To copy a directory, the following command is used cp -r (directory name ) (new directory_copy)**
-==mv (move)== command is used to **move or** **rename files in the directory**. eg mv test1.txt mydirectory
+**==CP== ==COMMAND==** 
+
+**Cp** **(copy)** - is used to copy files from the current directory to a different directory  or copy a file 
+CP option source destination 
+example cp test1.txt test1_copy.txt
+
+**To copy a directory that contains folders to another directory, run the below command 
+cp -r (directory name ) (new directory_copy)**
+
+If a file already exist in a directory and you try to copy the same directory, run 
+cp -I (Flag I stands for interactive)
+this will ask for confirmation before overwriting 
+
+==**MV COMMAND IN LINUX**== 
+
+**mv (move)** command is used to **move or** **rename files in the directory**. eg mv test1.txt mydirectory
 this moves the txt files to the required directory
 ==mv -r== : is used to remove directory .(**-r is a recursive**)
 
-**TO REMOVE DIRECTORY** 
-rm -r (directory name)
-if access denied run. sudo rm -r (directory name)vim
+==**TO REMOVE DIRECTORY**== 
+
+**rm -r** (directory name)
+if access denied run. **sudo rm -r (directory name)vim**
 
 
 rm (remove) is used to remove files from the directory 
@@ -54,6 +73,7 @@ echo "welcome1999 >> welcome.txt "
 the symbol **>>** Adds a content on the file 
 a single **>** overwrites the content 
 
+**==CAT COMMAND==** 
 
 **cat command- it has 3 functions 
 echoing eg cat enter. test. this will echo test. to come of the txt press ctrl d 
@@ -84,8 +104,10 @@ to view first 5 line use the following command: ~head -n 5 text1.txt
 you can use head and tail command : head -n10 text1.txt  | tail -n 5
 
 **head and tail command is used to view the beginning and end of a file** 
+**PIPING (|)** piping is use to sending data from one program to another. what this does is it feeds the output from the program on the left as an input to nthe program on the right. 
 
-
+You may combine pipes and redirection too.
+example: head -n10 text1.txt  | tail -n 5 > output.txt 
 **sudo !!** - means you are trying to run a previous command 
 
 ==**SETTING ZSH TO BE DEFAULT SHELL== 
@@ -106,7 +128,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 
 
-**THE SUDO COMMAND 
+==**THE SUDO COMMAND== 
+
 Sudo (super user do)- it  allows permitted user to execute command as a super user or administrative privilege 
 sudo command can only be run by a root user or a user with an elevated permission
 sudo command is required when creating users and groups 
@@ -175,8 +198,8 @@ r- read w- write x- you can run the file as a programme
 ![[Pasted image 20250531172850.png]]
 ![[Pasted image 20250531171227.png]]
 
-HOW TO MODIFY PERMISSION 
-TO GRANT USER EXECUTE PERMISSION ON A FILE :
+**==HOW TO MODIFY PERMISSION==** 
+**TO GRANT USER EXECUTE PERMISSION ON A FILE :**
 ~chmod u+x (user+execute), group+r (group+read), o-w (remove w permission from others) filename 
 example chmod u+x,g+r,o-w welcome.txt
 

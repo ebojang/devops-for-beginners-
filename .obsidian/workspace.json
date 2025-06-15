@@ -6,81 +6,43 @@
       {
         "id": "53fdd68a54c0a571",
         "type": "tabs",
-        "dimension": 72.3993288590604,
+        "dimension": 67.70134228187919,
         "children": [
           {
             "id": "47f827cbb3b9a459",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "4774677da94c95df",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/LINUX FUNDAMENTALS.md",
+                "file": "Bash/MY FIRST SCRIPT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LINUX FUNDAMENTALS"
+              "title": "MY FIRST SCRIPT"
             }
           },
           {
-            "id": "d8c70ce5316ef9d1",
+            "id": "f5719e3727f04315",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bash/INTRODUCTION TO BASH SCRIPTING.md",
+                "file": "Bash/VARIABLES.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INTRODUCTION TO BASH SCRIPTING"
-            }
-          },
-          {
-            "id": "8f5a546dcd39dd19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GIT.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GIT"
-            }
-          },
-          {
-            "id": "07fdb178434193ad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/LINUX FUNDAMENTALS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LINUX FUNDAMENTALS"
+              "title": "VARIABLES"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "8b15c41fdde5ce27",
         "type": "tabs",
-        "dimension": 27.600671140939593,
+        "dimension": 32.29865771812081,
         "children": [
           {
             "id": "1fa87bee433a0963",
@@ -94,6 +56,20 @@
               },
               "icon": "lucide-file",
               "title": "Bandit game command"
+            }
+          },
+          {
+            "id": "72826344f9cb34cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "INTERVIEW PREP/INTERVIEW PREP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "INTERVIEW PREP"
             }
           }
         ]
@@ -128,7 +104,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": " ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -243,10 +219,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8c70ce5316ef9d1",
+  "active": "f5719e3727f04315",
   "lastOpenFiles": [
+    "Bash/INTRODUCTION TO BASH SCRIPTING.md",
+    "Bash/MY FIRST SCRIPT.md",
+    "Bash/VARIABLES.md",
+    "Pasted image 20250615143352.png",
     "Linux/LINUX FUNDAMENTALS.md",
     "OVERTHEWHIRE BANDIT GAME/Bandit game command.md",
+    "INTERVIEW PREP/INTERVIEW PREP.md",
+    "INTERVIEW PREP",
+    "ECS PROJECTS",
     "WSL CMD.md",
     "GIT.md",
     "OVERTHEWHIRE BANDIT GAME",
@@ -258,8 +241,6 @@
     "Linux/Pasted image 20250531171150.png",
     "Linux/Pasted image 20250520145608.png",
     "Bash",
-    "Bash/INTRODUCTION TO BASH SCRIPTING.md",
-    "Bash/shebang line.md",
     "README.md",
     "Welcome.md",
     "Obsidian-1.8.10.exe",
