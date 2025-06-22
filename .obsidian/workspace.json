@@ -42,7 +42,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IF statement.md",
+                "file": "Bash/IF statement.md",
                 "mode": "source",
                 "source": false
               },
@@ -233,10 +233,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "faa24a687e83092d",
+  "active": "3f28c091e773ebd3",
   "lastOpenFiles": [
     "Bash/VARIABLES.md",
-    "IF statement.md",
+    "Bash/IF statement.md",
     "Bash/MY FIRST SCRIPT.md",
     "Linux/LINUX FUNDAMENTALS.md",
     "Bash/INTRODUCTION TO BASH SCRIPTING.md",
