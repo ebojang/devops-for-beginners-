@@ -23,3 +23,26 @@ run
 ./myfirstscript
 
 
+PARAMETERS
+
+when running a script, ypu provided parameter after the script name separated by spaces.
+
+example
+./myfirstscript.sh hello hi goodby 
+edit script and insert parameter 
+
+#! /bin/bash
+echo "parameter 1: $1"
+echo "parameter 2: $2"
+echo "parameter 3: $3"
+
+when executing script with parameters the values passed on the command line will be substituted into the scripts parameters
+
+**to access all parameters passed into a script  insert the below special variable** 
+echo "all parameters: $@"
+"
+
+
+
+
+
