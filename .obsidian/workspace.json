@@ -51,7 +51,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "8b15c41fdde5ce27",
@@ -233,11 +233,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3f28c091e773ebd3",
+  "active": "f5719e3727f04315",
   "lastOpenFiles": [
+    "Bash/MY FIRST SCRIPT.md",
     "Bash/VARIABLES.md",
     "Bash/IF statement.md",
-    "Bash/MY FIRST SCRIPT.md",
     "Linux/LINUX FUNDAMENTALS.md",
     "Bash/INTRODUCTION TO BASH SCRIPTING.md",
     "Pasted image 20250615143352.png",
