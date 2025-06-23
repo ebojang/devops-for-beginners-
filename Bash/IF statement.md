@@ -96,3 +96,35 @@ do
 	echo "Number: $i"
 done
 echo "the file no longer exist"
+
+**BREAK AND CONTINUE** 
+
+Gives you the flexibility to interupt a loop when necessary
+**EXAMPLE OF BREAK** 
+
+#!/bin/bash 
+for (( i=1; i<=5; i++)) 
+do 
+	 If [ $1 -eq 3 ]
+	 then
+		 break
+		fi	 
+	echo "Number: $i"
+done
+this ends the the loop prematurely.
+
+
+**example of continue statement**
+
+#!/bin/bash 
+for (( i=1; i<=5; i++)) 
+do 
+	 If [ $1 -eq 3 ]
+	 then
+		 continue
+		fi	 
+	echo "Number: $i"
+done
+echo "the file no longer exist"
+
+this skips echo number3 and then continue the loop
