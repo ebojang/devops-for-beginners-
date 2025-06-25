@@ -32,7 +32,7 @@ $# = number of arguments
 $0 = name of the script 
 $@ = for all arguments 
 
-read command is used for interactive prompt in functions 
+**read command is used for interactive prompt in functions** 
 
 greet(){
 local name
@@ -45,3 +45,5 @@ fi
 echo "hello, $name"
 }
 greet
+
+

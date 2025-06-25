@@ -1,0 +1,1 @@
+AWK is used to filter file content or output of a command.

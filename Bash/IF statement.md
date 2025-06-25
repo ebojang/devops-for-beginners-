@@ -8,7 +8,7 @@ fi
 NOTE:
 The code block statement is always between the **"then and fi"
 
-conditions in the IF **statement are formed using comparision operators
+conditions in the IF **statement are formed using comparison operators
 Example 
 eq= equals ne= not equal to le=less than  gt = greater than 
 
@@ -39,7 +39,7 @@ when we run this script,
 it will echo 
 "the variable does not equal to 200"
 
-NESTED IF STATEMENT 
+**NESTED IF STATEMENT** 
 allows the evaluation of multiple conditions and execution of code blocks based on the results
 
 example 
@@ -65,7 +65,7 @@ means else if
 if the previous statement is not correct or true try this if statement 
 
 
-**EXIT CODES IN BASH** 
+==**EXIT CODES IN BASH**== 
 let us know whether a previous command was successful or failed.
 to run exit code 
 run echo $?
@@ -74,7 +74,7 @@ when unsuccessful it will give you 1 or more
 example ls -l /etc
 echo $?
 
-**while loops**
+==**while loops**==
 while loops continues to run until a particular condition is met only then it will stop running.
 it starts with keyword while (condition)
 
@@ -86,7 +86,7 @@ done
 echo "the file no longer exist"
 
 
-**FOR LOOPS** 
+==**FOR LOOPS**== 
 are used for automating tasks or
 executing a set of commands against each items in a set
 
