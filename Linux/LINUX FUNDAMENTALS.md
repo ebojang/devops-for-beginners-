@@ -230,11 +230,25 @@ sudo chown (username):(groupname) "directory name)"
 ls - l to check the owner and group 
 
 
+ENVIRONMENT VARIABLES 
 
+Enironment variables are variables that are set in the environment and affects the  behaviour of processes on the system. They store configuration settings.
+$PATH environment variable tells the system where to look for executed files. 
+echo $PATH
 
+**TO VIEW CURRENT ENVIRONMENT VARIABLE, RUN**
+~ printenv or env
 
+**SETTING TEMPORARY ENVIRONEMT VARIABLE** 
 
+export MY_VAR="hello world"
+echo $MY_VAR 
 
+vim .zshrc
+source .zshrc
+
+to check shell run 
+cat /etc/shells
 
 
 
