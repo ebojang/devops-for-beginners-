@@ -230,9 +230,9 @@ sudo chown (username):(groupname) "directory name)"
 ls - l to check the owner and group 
 
 
-ENVIRONMENT VARIABLES 
+**ENVIRONMENT VARIABLES** 
 
-Enironment variables are variables that are set in the environment and affects the  behaviour of processes on the system. They store configuration settings.
+Environment variables are variables that are set in the environment and affects the  behaviour of processes on the system. They store configuration settings.
 $PATH environment variable tells the system where to look for executed files. 
 echo $PATH
 
@@ -250,7 +250,9 @@ source .zshrc
 to check shell run 
 cat /etc/shells
 
+environment variables can also be assigned to local variables within our script, making them easier to reference them later.
 
+STANDARD ENVIRONMENT VARIABLES 
 
 
 
