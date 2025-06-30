@@ -1,8 +1,26 @@
 Git is a distributed version control system used to track changes in source code during software development. 
+
+**WHAT IS VERSION CONTROL?**
+Version control tracks changes in source code during software development. it helps undo, inspect and collaborate. 
+it helps revert if anything goes wrong. 
+
 **why?**
 it allows multiple developers to work on the same project without conflicting and enable the tracking of every single change.
 once completed, branch feature or dev branches merge into main branch (production).
 if production version 2 breaks, you can always roll back to version1.
+
+note 
+Git is not just a file tracker. Git tracks snapshots and not diffs. it takes snapshots of what the file looks like at that point in time. 
+Git uses a key value store (SHA-1 Hash).
+no two different blobs or objects will have the same hash.
+git is content-addressed, not file-name based. this means if the file changes, the hash changes. 
+
+**GIT INTERNALS AND CORE CONCEPTS** 
+
+
+![[Pasted image 20250630211322.png]]
+
+
 
 
 **How do you branch out from the main branch in a GIT to dev branch and feature branch?

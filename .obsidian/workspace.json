@@ -112,12 +112,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reading files.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reading files"
+              "title": "GIT"
             }
           }
         ],
@@ -305,9 +305,10 @@
   },
   "active": "410add2af7b94f32",
   "lastOpenFiles": [
-    "Bash/Change Path Permanently.md",
-    "Reading files.md",
+    "Pasted image 20250630211322.png",
     "Linux/LINUX FUNDAMENTALS.md",
+    "Reading files.md",
+    "Bash/Change Path Permanently.md",
     "Bash/FUNCTIONS.md",
     "ERROR DIAGNOSTICS.md",
     "GIT.md",
