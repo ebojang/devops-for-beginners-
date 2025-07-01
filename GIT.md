@@ -1,8 +1,16 @@
+
+GIT: is a software 
+Github: is a service provider . example when you work on a git and wants to save it on the cloud, that's when github is used.
+
+
 Git is a distributed version control system used to track changes in source code during software development. 
+GIT: is a software 
+Github: is a service provider . example when you work on a git and wants to save it on the cloud, that's when github is used.
 
 **WHAT IS VERSION CONTROL?**
-Version control tracks changes in source code during software development. it helps undo, inspect and collaborate. 
+Version control tracks changes in source code/ files during software development. it helps undo, inspect and collaborate. 
 it helps revert if anything goes wrong. 
+
 
 **why?**
 it allows multiple developers to work on the same project without conflicting and enable the tracking of every single change.
@@ -16,10 +24,52 @@ no two different blobs or objects will have the same hash.
 git is content-addressed, not file-name based. this means if the file changes, the hash changes. 
 
 **GIT INTERNALS AND CORE CONCEPTS** 
+ **REPO-** is a folder which contains lots of software files
+ git --version or git -v 
+check git status by running 
+git status
 
+ **==How to track a particular folder in your repo?
+
+**Working Dir > git add > Staging Area > git commit > Repo > Git push > Github** 
+1)  first initialise the software: **git init
+ git init is run one time per project. **
+ git initialised creates a .git folder. once run. .git is a hidden folder that keep history of all files and sub folders
+cd into your folder and run : ls -la (.git folder should now be created)
+cd .git 
+ls 
+note
+DO NOT GO INTO THE .GIT FOLDER TO CHANGE THINGS MANUALLY 
+
+within your dir. create a working directory example mkdir gitone
+cd gitone > touch test.txt test.txt 
+run git status. . 
+ # use "git add <filename> ...."  to keep the files under the tracking zone. 
+example
+git add testone.txt
+git status: this should now show "changes to be committed: (filename to be tracked)"
+note 
+git add . (.) means add everything that I have 
+now we are in the **staging area.  this is an intermediate zone before we make any commit.
+
+
+ 1) COMMIT is like a checkpoint.
+ run
+git commit -m (-m stands for message) "add file one"
 
 ![[Pasted image 20250630211322.png]]
 
+IF a folder have a .git directory inside, it is a **repo 
+
+==**THE .GIT DIRECTORY**==
+The .git folder is a hidden folder and every repo have a .git folder. 
+.git is the brain of your projects. it contains all history and configs git needs to function. 
+
+**.git/refs/** is the place where git stores all the branches and tags
+**.git/objects/** is where git stores all commits, blobs and trees.
+**.git/config** is where repo-specific settings are.
+**.git/HEAD tells git what branch or commit you are currently on
+.git/index is a staging area . this is a temporary zone 
 
 
 
@@ -41,3 +91,4 @@ note: before pushing to main branch/merging, a merge request or pull request is 
 **what is a merge conflict?**
 merge conflict is a conflict between 2 pulls. 
 
+[^1]: create a working directory> git add> Staging area> git commit>Repo>git push>Github
