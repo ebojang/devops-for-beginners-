@@ -8,6 +8,7 @@ Linux benefits
 ==**POPULAR LINUX COMMANDS== 
 Linux file system directories 
 **Ls  (list directory) - view the content of a directory 
+ls -l shows a detailed list of files in a long format
 ls -R list directories recursively. eg devops/cloud/support
 devops:
 cloud
@@ -19,10 +20,24 @@ support
  **==CD COMMAND==** 
  
 **Cd (change directory)**-  navigate through the Linux files and directories 
-
+- . (current directory). This is the directory you are currently in.
+- .. (parent directory). Takes you to the directory above your current.
+- ~ (home directory). This directory defaults to your “home directory”. Such as /home/pete.
+- - (previous directory). This will take you to the previous directory you were just at.
 **Cd ..** -  takes you one directory up  
 
 **Pwd (print/ present working directory)** – shows your current working directory 
+touch -  allows you to create new empty files.
+
+**file** -filenames aren’t required to represent the contents of the file . to find out what kind of a file a file is . run 
+$ file (filename)
+**less.**  if you are viewing text files larger than a simple output, less is more.
+$ less /home/pete/Documents/text1
+
+**find command**
+$ find /home -name puppies.jpg
+find /home -type d -name MyFolder
+You can see that I set the type of file I’m trying to find as (d) for directory and
 
 ==**MKDIR COMMAND**== 
 
@@ -33,7 +48,7 @@ mkdir "folder name "  example mkdir "my dev folder"
 or mkdir my\ dev\ folder and then enter 
 to view directory content with space name : **cat "my dev folder"**
 
-==**mkdir -p**==  i**s used to create nested directory eg ***mkdir -p Directory/ subdirectory/sub-subdirectory***
+==**mkdir -p**== (parent flag) i**s used to create nested directory eg ***mkdir -p Directory/ subdirectory/sub-subdirectory***
 **==ls -R Directory==** - list directory recursively 
 **Rmdir** – remove empty directory a. Eg rmdir Hello – remove directory called “Hello” 
 
@@ -57,13 +72,16 @@ this will ask for confirmation before overwriting
 
 **mv (move)** command is used to **move or** **rename files in the directory**. eg mv test1.txt mydirectory
 this moves the txt files to the required directory
-==mv -r== : is used to remove directory .(**-r is a recursive**)
+move a file to a different directory: $ mv file2 /home/pete/Documents or 
+more than one file :
+$ mv file_1 file_2 /somedirectory
+==mv -r== : is used to move directory .(**-r is a recursive**)
 
 ==**TO REMOVE DIRECTORY**== 
-
+rm -f (force)- remove all files
 **rm -r** (directory name)
 if access denied run. **sudo rm -r (directory name)vim**
-
+ rm -i (interactive)
 
 rm (remove) is used to remove files from the directory 
 **Locate**: this cmd is used to locate a file, just like the search command  in windows 
