@@ -4,8 +4,7 @@ Github: is a service provider . example when you work on a git and wants to save
 
 
 Git is a distributed version control system used to track changes in source code during software development. 
-GIT: is a software 
-Github: is a service provider . example when you work on a git and wants to save it on the cloud, that's when github is used.
+
 
 **WHAT IS VERSION CONTROL?**
 Version control tracks changes in source code/ files during software development. it helps undo, inspect and collaborate. 
@@ -27,14 +26,15 @@ git is content-addressed, not file-name based. this means if the file changes, t
  **REPO-** is a folder which contains lots of software files
  git --version or git -v 
 check git status by running 
-git status
+git status - check git status 
 
  **==How to track a particular folder in your repo?
 
 **Working Dir > git add > Staging Area > git commit > Repo > Git push > Github** 
 1)  first initialise the software: **git init
  git init is run one time per project. **
- git initialised creates a .git folder. once run. .git is a hidden folder that keep history of all files and sub folders
+ git initialised creates a .git folder. once run. 
+ .git is a hidden folder that keep history of all files and sub folders
 cd into your folder and run : ls -la (.git folder should now be created)
 cd .git 
 ls 
@@ -56,6 +56,30 @@ now we are in the **staging area.  this is an intermediate zone before we make a
  1) COMMIT is like a checkpoint.
  run
 git commit -m (-m stands for message) "add file one"
+ you can run **git log** - this gives you details of all the changes 
+or **git --oneline** 
+note :
+a commit is always dependent on a previous commit. this helps us to track changes.
+every time a commit is made, a hash is created  
+
+****GIT CONFIGURATION FILE**** 
+
+set git username :
+git config --global user.name "Mona Lisa"
+git config --global user.email "ebojang"
+
+GIT IGNORE 
+
+Gitignore is read by GIT itself. first create the file 
+ touch .ignore
+ once created, run git status
+  open the .gitignore folder in vsc and insert the files and folders you don't want Git to track 
+
+
+
+
+
+
 
 ![[Pasted image 20250630211322.png]]
 
@@ -92,3 +116,23 @@ note: before pushing to main branch/merging, a merge request or pull request is 
 merge conflict is a conflict between 2 pulls. 
 
 [^1]: create a working directory> git add> Staging area> git commit>Repo>git push>Github
+
+
+**GIT BRANCHES** 
+
+Branches on git are like a timeline. branch name have to be unique eg could be ticket ref-increase RDS size)
+
+HOW TO CREATE MULTIPLE BRANCHES IN GIT
+
+git branch (branch name)
+enter git branch (the new branch should now be under the master branch)
+
+**TO SWITCH TO NEW BRANCH
+git checkout/switch (new branch name)
+git log --oneline
+the head now points at the new branch . example 
+master 
+*testbranch
+
+NOTE 
+Head always points to where the branch is currently at

@@ -126,12 +126,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/LINUX FUNDAMENTALS.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LINUX FUNDAMENTALS"
+              "title": "GIT"
             }
           }
         ],
@@ -319,14 +319,15 @@
   },
   "active": "df5e587b5739a5d7",
   "lastOpenFiles": [
+    "ERROR DIAGNOSTICS.md",
+    "Bash/VARIABLES.md",
     "GIT.md",
+    "Linux/LINUX FUNDAMENTALS.md",
     "Practice questions.md",
     "Pasted image 20250630211322.png",
-    "Linux/LINUX FUNDAMENTALS.md",
     "Reading files.md",
     "Bash/Change Path Permanently.md",
     "Bash/FUNCTIONS.md",
-    "ERROR DIAGNOSTICS.md",
     "Pasted image 20250615143352.png",
     "WSL CMD.md",
     "README.md",
@@ -335,7 +336,6 @@
     "Linux/Pasted image 20250531171209.png",
     "Linux/Pasted image 20250531171150.png",
     "Linux/Pasted image 20250520145608.png",
-    "Bash/VARIABLES.md",
     "Bash/Error handling.md",
     "AWK.md",
     "Bash/IF statement.md",
