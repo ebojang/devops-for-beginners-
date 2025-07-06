@@ -68,7 +68,7 @@ set git username :
 git config --global user.name "Mona Lisa"
 git config --global user.email "ebojang"
 
-GIT IGNORE 
+**GIT IGNORE** 
 
 Gitignore is read by GIT itself. first create the file 
  touch .ignore
@@ -134,5 +134,57 @@ the head now points at the new branch . example
 master 
 *testbranch
 
+to create a new branch and move there, you can run 
+git switch -c (new branch name)
+
 NOTE 
 Head always points to where the branch is currently at
+always commit before switching to another branch
+
+MERGING BRANCHES
+
+There are two types of merging branches 
+fast forward and not fast forward merge 
+
+Fast forward merge
+
+steps 
+first check which brsnch you on 
+git branch 
+your branch should be pointed at master or the branch you are merging the new branch to 
+
+git merge (dev branch name / secondary branch name)
+
+
+**GIT COMMAND**
+
+git diff ( shows difference between the same file. )
+it show you file state before stage (before commit) and after stage (after commit).
+
+edit file 
+run git status 
+git add (filename)
+git diff --staged ( this shows you the file before commit and current stage)
+
+once run,
+you will see
+--- testfile.txt (this represents before staging)
+++= testfile.txt (during staging)
+
+GIT STASH 
+git stash is like a temporary shelf where you can keep your code 
+note:
+conflicting changes do not allow to switch branch without commit 
+error code 
+error: Your local changes to the following files would be overwritten by checkout:**
+        **heroeb.html**
+        **test_branch.html**
+Please commit your changes or stash them before you switch branches.**
+Aborting
+
+GIT stash is then use to move between branches.
+once you complete switching branches and one to continue working on the branch you were on. 
+
+git switch (branch you need to complete work on example ebranch)
+git stash pop 
+also you can run  git stash list 
