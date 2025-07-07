@@ -188,3 +188,9 @@ once you complete switching branches and one to continue working on the branch y
 git switch (branch you need to complete work on example ebranch)
 git stash pop 
 also you can run  git stash list 
+
+git checkout HEAD ~2 (this looks at two commits prior)
+
+git restore filename (file can only be restored back to the last commit only)
+
+git reflog (takes you back to where you were )
