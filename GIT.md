@@ -1,6 +1,6 @@
 
 GIT: is a software 
-Github: is a service provider . example when you work on a git and wants to save it on the cloud, that's when github is used.
+Github: is a service provider that host git online. example when you work on a git and wants to save it on the cloud, that's when github is used.
 
 
 Git is a distributed version control system used to track changes in source code during software development. 
@@ -117,7 +117,7 @@ merge conflict is a conflict between 2 pulls.
 
 [^1]: create a working directory> git add> Staging area> git commit>Repo>git push>Github
 
-
+git commit -am (is another shortcut for adding and committing at the same time)
 **GIT BRANCHES** 
 
 Branches on git are like a timeline. branch name have to be unique eg could be ticket ref-increase RDS size)
@@ -127,7 +127,7 @@ HOW TO CREATE MULTIPLE BRANCHES IN GIT
 git branch (branch name)
 enter git branch (the new branch should now be under the master branch)
 
-**TO SWITCH TO NEW BRANCH
+TO SWITCH TO NEW BRANCH
 git checkout/switch (new branch name)
 git log --oneline
 the head now points at the new branch . example 
@@ -156,7 +156,7 @@ your branch should be pointed at master or the branch you are merging the new br
 git merge (dev branch name / secondary branch name)
 
 
-**GIT COMMAND**
+GIT COMMAND
 
 git diff ( shows difference between the same file. )
 it show you file state before stage (before commit) and after stage (after commit).
@@ -194,3 +194,22 @@ git checkout HEAD ~2 (this looks at two commits prior)
 git restore filename (file can only be restored back to the last commit only)
 
 git reflog (takes you back to where you were )
+
+
+GIT REBASE 
+
+Git rebase can be use as am alternative to merge or 
+it can also be used as a clean-up tool (clean up commits)
+
+NOTE
+NEVER RUN GIT REBASE ON A MAIN/MASTER BRANCH. ONLY RUN ON A SIDE BRANCH
+
+First check which branch you are on. 
+example secondary branch 
+
+git rebase master/main 
+
+GITHUB 
+
+Github - is a service to host git online.
+it's a collaboration tool, it is used for backup and open source
