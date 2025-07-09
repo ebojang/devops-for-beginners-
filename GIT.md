@@ -149,7 +149,7 @@ fast forward and not fast forward merge
 Fast forward merge
 
 steps 
-first check which brsnch you on 
+first check which branch you on 
 git branch 
 your branch should be pointed at master or the branch you are merging the new branch to 
 
@@ -213,3 +213,10 @@ GITHUB
 
 Github - is a service to host git online.
 it's a collaboration tool, it is used for backup and open source
+
+REBASE VS MERGE 
+* Merge brings two branches together and preserve the history. where as rebase rewrites history 
+* merge creates a new commit where as rebase does not 
+* merge is good for team work where as rebase is good for cleanup before production.
+NOTE
+DO NOT REBASE SHARE BRANCHES AS THIS SOMETIMES BREAK CODE AND CONFUSSION
