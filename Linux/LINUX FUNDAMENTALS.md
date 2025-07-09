@@ -100,7 +100,8 @@ echoing eg cat enter. test. this will echo test. to come of the txt press ctrl d
 to read a directory call -
 enter cat ./-
 
-
+standard in in command (stdin:
+$ cat <oeanut.txt > banan.txt
 **==Vim==**- use vim command to insert text. once completed press esc  **: wq (write and quit)** to save text and exit 
  whilst in command mode in vim. to move to the **beginning** of a line, **press zero (0)**
  to move to the **end** of a line press *
@@ -126,6 +127,18 @@ you can use head and tail command : head -n10 text1.txt  | tail -n 5
 
 You may combine pipes and redirection too.
 example: head -n10 text1.txt  | tail -n 5 > output.txt 
+**env (Environment)**
+run env to vie environment variable 
+One particularly important variable is the PATH Variable. 
+
+**cut command**
+cur command extracts portions of text from a file.
+example 
+$ echo 'The quick brown; fox jumps over the lazy  dog' > sample.txt
+$ cut -c 5 sample.txt
+This outputs the 5th character in each line of the file. In this case it is "q", note that the space also counts as a character.
+
+
 **sudo !!** - means you are trying to run a previous command 
 
 ==**SETTING ZSH TO BE DEFAULT SHELL== 
