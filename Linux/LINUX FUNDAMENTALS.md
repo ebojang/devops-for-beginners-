@@ -163,9 +163,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 Sudo (super user do)- it  allows permitted user to execute command as a super user or administrative privilege 
 sudo command can only be run by a root user or a user with an elevated permission
-sudo command is required when creating users and groups 
+==sudo command is required when creating users and groups== 
 **
-ROOT USER PLUS A DANGEROUS COMMAND 
+**ROOT USER PLUS A DANGEROUS COMMAND** 
 to run as root user, enter 
 sudo su
 followed by whoami
@@ -224,7 +224,7 @@ to confirm group has been deleted run:
 grep (groupname) /etc/group
 or etc/group 
 
-INTRODUCTION TO FILE PERMISSIONS
+**==INTRODUCTION TO FILE PERMISSIONS==**
 r- read w- write x- you can run the file as a programme
 ![[Pasted image 20250531172850.png]]
 ![[Pasted image 20250531171227.png]]

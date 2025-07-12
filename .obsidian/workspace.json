@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "Bash/FUNCTIONS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GIT"
+              "title": "FUNCTIONS"
             }
           },
           {
@@ -283,15 +283,16 @@
   },
   "active": "410add2af7b94f32",
   "lastOpenFiles": [
+    "Bash/VARIABLES.md",
+    "Bash/IF statement.md",
+    "Linux/LINUX FUNDAMENTALS.md",
+    "GIT.md",
     "Bash/MY FIRST SCRIPT.md",
     "INTERVIEW PREP/INTERVIEW PREP.md",
     "OVERTHEWHIRE BANDIT GAME/Bandit game command.md",
-    "GIT.md",
     "Bash/INTRODUCTION TO BASH SCRIPTING.md",
     "Bash/Change Path Permanently.md",
-    "Linux/LINUX FUNDAMENTALS.md",
     "ERROR DIAGNOSTICS.md",
-    "Bash/VARIABLES.md",
     "Practice questions.md",
     "Pasted image 20250630211322.png",
     "Reading files.md",
@@ -306,7 +307,6 @@
     "Linux/Pasted image 20250520145608.png",
     "Bash/Error handling.md",
     "AWK.md",
-    "Bash/IF statement.md",
     "INTERVIEW PREP",
     "ECS PROJECTS",
     "OVERTHEWHIRE BANDIT GAME",
