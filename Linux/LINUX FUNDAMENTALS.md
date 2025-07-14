@@ -17,6 +17,19 @@ support
 
 **lso**f : lists on its standard output file information about files opened  by  processes
 
+**note**:
+- `-` one dash informs the system that we will pass one letter argument, like 'l'
+- `--` two dashes means that argument will contain more than one letter. Most commonly it will be an english word.
+
+==**SORTING FILES== 
+sorting files by time. Run ls -ltu or ltc
+sort files by size: ls -s or ls -lS
+ls -lS - sort files by size , largest are going first
+
+==**Argument human readable or better -h**== 
+ls -lSh or ls -lh
+
+**
  **==CD COMMAND==** 
  
 **Cd (change directory)**-  navigate through the Linux files and directories 
@@ -31,7 +44,7 @@ touch -  allows you to create new empty files.
 
 **file** -filenames aren’t required to represent the contents of the file . to find out what kind of a file a file is . run 
 $ file (filename)
-**less.**  if you are viewing text files larger than a simple output, less is more.
+==**less.**==  if you are viewing text files larger than a simple output, less is more.
 $ less /home/pete/Documents/text1
 
 **find command**
@@ -48,12 +61,20 @@ mkdir "folder name "  example mkdir "my dev folder"
 or mkdir my\ dev\ folder and then enter 
 to view directory content with space name : **cat "my dev folder"**
 
+**create 10 directories, starting with `testdir1` to `testdir10`. How to do it in one command?**
+*==mkdir tesdir{1..10}==*
+
+
 ==**mkdir -p**== (parent flag) i**s used to create nested directory eg ***mkdir -p Directory/ subdirectory/sub-subdirectory***
 **==ls -R Directory==** - list directory recursively 
 **Rmdir** – remove empty directory a. Eg rmdir Hello – remove directory called “Hello” 
 
 **==rmdir -r==** is used to remove directory that contain folders or files or that have content in them 
 **Touch**- is used to create an empty file. EG touch hello.txt   - a file name hello.txt has been created . it can also be used to update the time stamp of the existing file  :
+
+
+**tree command** 
+It recursively shows the content of the directory. Recursively means if there is a subdirectory, its content will be shown as well.
 
 **==CP== ==COMMAND==** 
 
@@ -123,7 +144,7 @@ to view first 5 line use the following command: ~head -n 5 text1.txt
 you can use head and tail command : head -n10 text1.txt  | tail -n 5
 
 **head and tail command is used to view the beginning and end of a file** 
-**PIPING (|)** piping is use to sending data from one program to another. what this does is it feeds the output from the program on the left as an input to nthe program on the right. 
+**PIPING (|)** piping is use to sending data from one program to another. what this does is it feeds the output from the program on the left as an input to the program on the right. 
 
 You may combine pipes and redirection too.
 example: head -n10 text1.txt  | tail -n 5 > output.txt 
@@ -246,6 +267,8 @@ if user have rwe permission, this will be, group have read permission+ execute a
 ~ chmod users and groups=rw others=r 
 ~ chmid ug+rw,o=r test.txt
 
+**owner**: *- the owner of the object. It doesn't mean who created it, but who owns it at this moment.
+- Group. Owner belongs to the group (of users). This inforation is here too. This means that our 'groupmates' have specific access to the file*
 **Changing file/Dir ownership for user/Group:**
 ~chown = is to change owner of file or directory 
 run: sudo chown (accountname) (filename)
@@ -286,10 +309,27 @@ environment variables can also be assigned to local variables within our script,
 STANDARD ENVIRONMENT VARIABLES 
 
 
+**some common commands** 
 
 
+`grep`. This command search for given pattern in the output. Output may be the file or output from other command.
 
+`grep 'case' .bashrc` This command will search for pattern `case` in a file `.bashrc`.
 
+`wc` is a utility for counting words, newlines, bytes. Commonly we use it for counting lines.
 
+When we execute
 
+`wc -l .bashrc`
 
+it will count how many lines (`-l` argument) are in our `.bashrc` file.
+
+`sort` will sort the output in alphabetical order
+
+****
+==**note the command uniq always work best with sort**==
+example 
+cat numbers.txt | sort | uniq |wc -l
+
+**to know what file type a file is. run** 
+file (filename)

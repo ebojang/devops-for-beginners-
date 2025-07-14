@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bash/FUNCTIONS.md",
+                "file": "Linux/LINUX FUNDAMENTALS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FUNCTIONS"
+              "title": "LINUX FUNDAMENTALS"
             }
           },
           {
@@ -283,6 +283,7 @@
   },
   "active": "410add2af7b94f32",
   "lastOpenFiles": [
+    "Bash/FUNCTIONS.md",
     "Bash/VARIABLES.md",
     "Bash/IF statement.md",
     "Linux/LINUX FUNDAMENTALS.md",
@@ -296,7 +297,6 @@
     "Practice questions.md",
     "Pasted image 20250630211322.png",
     "Reading files.md",
-    "Bash/FUNCTIONS.md",
     "Pasted image 20250615143352.png",
     "WSL CMD.md",
     "README.md",
