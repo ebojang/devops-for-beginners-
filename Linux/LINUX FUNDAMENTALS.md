@@ -186,6 +186,14 @@ Sudo (super user do)- it  allows permitted user to execute command as a super us
 sudo command can only be run by a root user or a user with an elevated permission
 ==sudo command is required when creating users and groups== 
 **
+**==files involved in users configuration==**
+**passwd **
+located in most config files /etc/passwd
+the structure 
+'username:password:UID:GID:description:homedir:shell'
+x in the password field means that password is encrypted and stored in another file
+
+
 **ROOT USER PLUS A DANGEROUS COMMAND** 
 to run as root user, enter 
 sudo su
@@ -193,6 +201,9 @@ followed by whoami
 root username conatins# at the end
 eg root@ebrima:/home/ebojang#
 this gives you an unrestricted access to the entire system.
+
+run the command **id
+this shows you UID, GID and other groups to which user belongs 
 
 rm -rf / - this removes everything in the root file system.
 rm is remove -r (recursive) f (force) / (root directory)
@@ -204,10 +215,23 @@ sudo useradd (new username)
 sudo passwd (new username)
 New Password: (enter the password for the new user)
 
+the command:
+which useradd or which adduser shows you where the executable is located.
+file 
+
+**to change user password 
+passwd (username)**
+
 **SWITCH NEW USER ON THE TERMINAL, ENTER BELOW COMMAND**
 ~**su (substitute user)** eg su - (new username)
 this will prompt you to enter the new user password 
 enter whoami to verify you are now the new user
+
+NOTE:
+when su is executed without user: `su -` root is assumed and you need to give root password.
+to quit the password prompt, press CTRL +c or try 3 times to login.
+
+
 
 NOTE: That the new user/account will not have SUDO privileges 
 
@@ -219,7 +243,7 @@ exit and on the root user profile enter the following
 exit from new user and run
 **sudo deluser (newusername) sudo**
 
-TO CREATE NEW GROUP 
+**TO CREATE NEW GROUP** 
 First check list of group names by entering 
 cat /etc/group
 
@@ -333,3 +357,30 @@ cat numbers.txt | sort | uniq |wc -l
 
 **to know what file type a file is. run** 
 file (filename)
+
+
+to kill process 
+
+
+THE PS COMMAND 
+Process status (ps)- with ps we can  only see these processes which are related to this session only.ps a
+ps -a
+
+ps aux shows the most important info, like PIC, status and resource usage
+
+**==ALIAS==**
+in order to create an alias we need to use the alis command. 
+Example:
+alias lh='ls alh'
+ll is an alias as well 
+
+**just typing the command alias , shows all defined aliases in the session.**
+
+**to remove alias, run the following** 
+unalias (followed by alias name or shortcut)
+example: unalias lh
+
+Make alias permanent
+grep "alias" .bashrc
+echo "alias lh='ls -alh'" >> .bashrc
+
