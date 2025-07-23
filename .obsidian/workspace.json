@@ -111,7 +111,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "GIT/GIT.md",
                 "mode": "source",
                 "source": false
               },
@@ -281,10 +281,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "410add2af7b94f32",
+  "active": "3f28c091e773ebd3",
   "lastOpenFiles": [
+    "GIT",
     "Linux/LINUX FUNDAMENTALS.md",
-    "GIT.md",
+    "GIT/GIT.md",
     "Bash/FUNCTIONS.md",
     "Bash/VARIABLES.md",
     "Bash/IF statement.md",
