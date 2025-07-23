@@ -384,3 +384,14 @@ Make alias permanent
 grep "alias" .bashrc
 echo "alias lh='ls -alh'" >> .bashrc
 
+
+
+UNDERSTANDING LOGS IN LINUX 
+
+ By default, all logs are stored in `/var/log` directory (or filesystem), however, every system has different approach to files structure
+cd /var/log
+
+sys log- Contains all important information about the system and applications.
+auth.log - Contains information about authorizations. All user login attempts (with information if successful or not), logout, password changes, remote logins and use of `sudo`.
+kern.log - stores kernel messages 
+last.log - contains information about last login

@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/LINUX FUNDAMENTALS.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LINUX FUNDAMENTALS"
+              "title": "GIT"
             }
           },
           {
@@ -283,11 +283,11 @@
   },
   "active": "410add2af7b94f32",
   "lastOpenFiles": [
+    "Linux/LINUX FUNDAMENTALS.md",
+    "GIT.md",
     "Bash/FUNCTIONS.md",
     "Bash/VARIABLES.md",
     "Bash/IF statement.md",
-    "Linux/LINUX FUNDAMENTALS.md",
-    "GIT.md",
     "Bash/MY FIRST SCRIPT.md",
     "INTERVIEW PREP/INTERVIEW PREP.md",
     "OVERTHEWHIRE BANDIT GAME/Bandit game command.md",

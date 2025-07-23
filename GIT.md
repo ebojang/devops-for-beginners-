@@ -118,7 +118,7 @@ merge conflict is a conflict between 2 pulls.
 [^1]: create a working directory> git add> Staging area> git commit>Repo>git push>Github
 
 git commit -am (is another shortcut for adding and committing at the same time)
-**GIT BRANCHES** 
+****GIT BRANCHES**** 
 
 Branches on git are like a timeline. branch name have to be unique eg could be ticket ref-increase RDS size)
 
@@ -155,6 +155,9 @@ your branch should be pointed at master or the branch you are merging the new br
 
 git merge (dev branch name / secondary branch name)
 
+DELETE GIT BRANCH 
+git branch -d (branch name)
+
 
 GIT COMMAND
 
@@ -172,7 +175,7 @@ you will see
 ++= testfile.txt (during staging)
 
 GIT STASH 
-git stash is like a temporary shelf where you can keep your code 
+git stash is like a temporary shelf/storage  where you can keep your code 
 note:
 conflicting changes do not allow to switch branch without commit 
 error code 
@@ -183,6 +186,7 @@ Please commit your changes or stash them before you switch branches.**
 Aborting
 
 GIT stash is then use to move between branches.
+ command git stash list- view all stashes 
 once you complete switching branches and one to continue working on the branch you were on. 
 
 git switch (branch you need to complete work on example ebranch)
@@ -194,6 +198,8 @@ git checkout HEAD ~2 (this looks at two commits prior)
 git restore filename (file can only be restored back to the last commit only)
 
 git reflog (takes you back to where you were )
+
+git log --oneline --graph -all  - this gives you the full view. this is great for debugging merges and tracking branches. it helps you see what is really happening under the hood.
 
 
 GIT REBASE 
@@ -220,3 +226,29 @@ REBASE VS MERGE
 * merge is good for team work where as rebase is good for cleanup before production.
 NOTE
 DO NOT REBASE SHARE BRANCHES AS THIS SOMETIMES BREAK CODE AND CONFUSSION
+
+
+
+GIT Cherry pick 
+
+git cherry-pick allows you to apply a single commit from another branch.
+
+
+FORKS & PULL REQUESTS
+
+Fork= your own copy of someone else's repo (on Github)
+clone the fork repo to your local machine  and make changes.
+when changes are completed, push to your fork on Github. 
+Open a pull request (PR) or megre to propose changes to the main project.
+
+this is normally used in open source and cross team workflows.
+once a PR is sent, orginal repo owner can review, comment and merge.
+
+
+To UNDO A STAGED STATUS :
+git restore --staged (filename)
+git status 
+
+to undo a commit message that has not been pushed yet, run
+git reset --soft HEAD~1
+This keeps your changes in staging 
