@@ -231,8 +231,11 @@ DO NOT REBASE SHARE BRANCHES AS THIS SOMETIMES BREAK CODE AND CONFUSSION
 
 GIT Cherry pick 
 
-git cherry-pick allows you to apply a single commit from another branch.
+git cherry-pick allows you to apply a single commit from another branch to your current location.
 
+git cherry-pick (commit one line ID of the commit you copied from another branch example 57a34bc)
+git push 
+ the copied commit ID  is now pushed into main or master branch.
 
 FORKS & PULL REQUESTS
 
