@@ -1,5 +1,5 @@
 
-Networking- is the practice of connecting computers and other devices together so they can share information, resources and access the internet.
+**Networking**- is the practice of connecting computers and other devices together so they can share information, resources and access the internet.
 
 **Local Area Network (LAN)**- is a network that connects devices within small local area such as home, office and school.
 They are fast and secure due to their limited range.
