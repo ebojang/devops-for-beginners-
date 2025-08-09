@@ -2,7 +2,16 @@
 **Networking**- is the practice of connecting computers and other devices together so they can share information, resources and access the internet.
 
 **Local Area Network (LAN)**- is a network that connects devices within small local area such as home, office and school.
+Inside a LAN, devices communicate through **network interfaces** and **protocols** using physical (Ethernet cables) or wireless (Wi-Fi) connections.
 They are fast and secure due to their limited range.
+
+**TO FIND DEVICES . ARP protocol is sometimes used** 
+ARP PROTOCOL or Address Resolution Protocol - is used to map IP address to a mac address.
+==How ARP  works:==
+- PC A wants to send a file to PC B.
+- PC A broadcasts: _“Who has IP 192.168.1.5?”_
+- PC B replies with its MAC address.
+
 
 **Wide Area Network (WAN)-** connect devices across large geographical areas, such as cities, countries and continents. example of WAN is the internet.
 WANs often use public infrastructure (like telephone lines, satellites, a VPN over the internet) and are typically slower than LANs due to distance and scale.
@@ -35,7 +44,7 @@ It's a 48 bit address and it operates at a data link layer (layer2)
 it facilitates identification within a local network.
 
 **PORTS & PROTOCOLS** 
-Ports are essentially doors within your actual device. Each port number is used for a specific type of network communication. Eg. Http: port 80 | https: port 443 
+Ports are essentially doors within your actual device. Each port number is used for a specific type of network communication. Eg. Http: port 80 | https: port 443 port 22 for ssh 
 ports are logical endpoints for communication.
 
 **TCP PROTOCOL**
@@ -43,6 +52,14 @@ TCP is a connection orientated and it requires handshake for connection to be es
 it is reliable for data transfer.
 it checks for error in data and control the flow of data to prevent congestion.
 example, web browsing, emails and file transfer 
+
+==**How  TCP works  step by step**==
+3 way handshake
+1) SYN -client "hey server (google) can we talk?"
+2) SYN-ACK- google server "sure i hear you, can you hear me?"
+3) ACK - client (user) "yes i hear you too, let's start"
+Now both site knows they can send/receive data reliably.
+
 
 **USER DATAGRAM PROTOCOL (UDP)**
 UDP - is simple to send and receive data 
