@@ -1,4 +1,4 @@
-first check python version
+	8765e34r56890-876543q212first check python version
 python3 --version 
 install flask 
 ==Flask is a simple and lightweight framework for creating web applications in python.== 

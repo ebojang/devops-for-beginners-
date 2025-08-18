@@ -47,3 +47,27 @@ WORKFLOW
 - `docker ps` after stopping → confirms nothing is running.
 
 
+**Introduction to Docker Compose:**
+
+Docker compose is a tool that allows you to define and manage multiple container applications.
+t’s a tool that:
+
+- Lets you define all your containers in a single **YAML file** (called a _Docker Compose file_).
+- Makes it easy to start, stop, and manage everything with simple commands.   
+- ==Automatically creates a network so containers can communicate without extra setup.== 
+
+The **YAML file** is like a blueprint. It specifies:
+- The services (containers) your app needs.
+- Images, ports, and how the containers link together.
+With just one command – **`docker-compose up`** – you can launch the entire environment in seconds.
+
+This makes Docker Compose ideal for building and running multi-container applications, such as the Flask and MySQL apps we’ve worked on earlier.
+
+IMPORTANCE OF DOCKER COMPOSE IN DEVOPS 
+* makes development and testing easier 
+* ensures consistency across different environments
+* enhances teamwork. makes it easy to share codes and configurations
+
+
+
+CREATE 
