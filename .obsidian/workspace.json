@@ -8,205 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "47f827cbb3b9a459",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bash/MY FIRST SCRIPT.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MY FIRST SCRIPT"
-            }
-          },
-          {
-            "id": "f5719e3727f04315",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bash/VARIABLES.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "VARIABLES"
-            }
-          },
-          {
-            "id": "faa24a687e83092d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bash/IF statement.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "IF statement"
-            }
-          },
-          {
-            "id": "bb065584b41a707f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bash/FUNCTIONS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "FUNCTIONS"
-            }
-          },
-          {
-            "id": "8d5c482087b00eea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bash/FUNCTIONS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "FUNCTIONS"
-            }
-          },
-          {
-            "id": "6c51258e7250fe0a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/LINUX FUNDAMENTALS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LINUX FUNDAMENTALS"
-            }
-          },
-          {
-            "id": "7ec8055765f42864",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bash/Change Path Permanently.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Change Path Permanently"
-            }
-          },
-          {
-            "id": "410add2af7b94f32",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/LINUX FUNDAMENTALS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LINUX FUNDAMENTALS"
-            }
-          },
-          {
-            "id": "b30fa14d0f143ea9",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "0e8d096de72d28c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Subnetting.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Subnetting"
-            }
-          },
-          {
-            "id": "e9d918c790d6ccb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking in DevOps/Subnetting.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Subnetting"
-            }
-          },
-          {
-            "id": "0ec616e55c380c65",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DEVOPS PROJECTS/NGINX PROJECT.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NGINX PROJECT"
-            }
-          },
-          {
-            "id": "7a3c9fcc0562a91f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CONTAINERS & DOCKER/Container & Docker.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Container & Docker"
-            }
-          },
-          {
-            "id": "4100df5bd7e5e02b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CONTAINERS & DOCKER/create simple web application to Dockerise.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "create simple web application to Dockerise"
-            }
-          },
-          {
             "id": "2e95a9648cbf2901",
             "type": "leaf",
             "state": {
@@ -291,49 +92,21 @@
             }
           },
           {
-            "id": "2169ded5e50e6533",
+            "id": "e185ce6c62e40e4b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking in DevOps/Routing.md",
+                "file": "CONTAINERS & DOCKER/DOCKERFILE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Routing"
-            }
-          },
-          {
-            "id": "7feb9b646210f0ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Subnetting.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Subnetting"
-            }
-          },
-          {
-            "id": "df5e587b5739a5d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GIT.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GIT"
+              "title": "DOCKERFILE"
             }
           }
         ],
-        "currentTab": 16
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -472,6 +245,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -480,25 +254,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3f28c091e773ebd3",
+  "active": "e185ce6c62e40e4b",
   "lastOpenFiles": [
-    "CONTAINERS & DOCKER/DOCKERFILE.md",
     "CONTAINERS & DOCKER/DOCKER REGISTRIES.md",
+    "CONTAINERS & DOCKER/DOCKERFILE.md",
     "CONTAINERS & DOCKER/create simple web application to Dockerise.md",
+    "CONTAINERS & DOCKER/Container & Docker.md",
+    "DEVOPS PROJECTS/NGINX PROJECT.md",
+    "Networking in DevOps/Subnetting.md",
+    "Bash/MY FIRST SCRIPT.md",
+    "Bash/VARIABLES.md",
+    "Bash/IF statement.md",
+    "Linux/LINUX FUNDAMENTALS.md",
+    "Bash/Change Path Permanently.md",
+    "Bash/FUNCTIONS.md",
+    "Networking in DevOps/OSI MODEL.md",
+    "Networking in DevOps/Networking Fundamentals.md",
     "Docker Networking Concepts.md",
     "CONTAINERS & DOCKER/README.md",
-    "CONTAINERS & DOCKER/Container & Docker.md",
-    "Networking in DevOps/Networking Fundamentals.md",
-    "Networking in DevOps/OSI MODEL.md",
-    "DEVOPS PROJECTS/NGINX PROJECT.md",
     "Screenshot 2025-08-07 233038.png",
     "DEVOPS PROJECTS",
     "Networking in DevOps/DOMAIN NAME SYSTEM (DNS).md",
     "GIT/GIT.md",
     "COMMON NETWORK ISSUES.md",
-    "Networking in DevOps/Subnetting.md",
     "Networking in DevOps/Routing.md",
-    "Linux/LINUX FUNDAMENTALS.md",
     "CONTAINERS & DOCKER",
     "Networking in DevOps/Using etc host files.md",
     "Reading files.md",
@@ -509,13 +288,8 @@
     "AWK.md",
     "OVERTHEWHIRE BANDIT GAME/Bandit game command.md",
     "Untitled.canvas",
-    "Practice questions.md",
-    "WSL CMD.md",
     "Networking in DevOps",
     "GIT",
-    "Bash/FUNCTIONS.md",
-    "Bash/VARIABLES.md",
-    "Bash/IF statement.md",
     "Linux/Pasted image 20250531172850.png",
     "Linux/Pasted image 20250531171227.png",
     "Linux/Pasted image 20250531171209.png",

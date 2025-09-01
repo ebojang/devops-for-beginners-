@@ -49,15 +49,85 @@
 1. login from the command line or vscode: docker login (enter username & password)
 2. Create a Repository-  On Docker Hub, click **Create Repository**.
 - Name it (e.g. `flask-mysql`) and set it as **public** or **private**.
-1. Build and tag your image -  docker build -t <dockerhub username>/<repository name>: tag (this could be a version number) . (. use the current directory)
+1. Build and tag your image -  **docker build -t <dockerhub username>/<repository name>: tag** (this could be a version number) . (. use the current directory)
  example : docker build -t ebrimabojang/flask-mysql:V1 .
 
  Push the Image to Docker Hub
- 1. docker push <username>/<repository>:<tag>
+ 2. docker push <username>/<repository>:<tag>
  example: docker push ebrimabojang/flask-mysql:V1 
  
  Pull the Image (Download it Anywhere)
  docker pull ebrimabojang/flask-mysql:v1
 this downloads it to your local host 
 
+**Learn how to upload (push) your Docker image to Amazon ECR (Elastic Container Registry)**, which is a private container image storage service by **AWS (Amazon Web Services).**
 
+
+Create a Repository in Amazon ECR
+## Pushing Docker Images to **Amazon ECR (Elastic Container Registry)**
+
+### Why use ECR instead of Docker Hub?
+
+- **Private & Secure**: Stores images inside your AWS account (not public like Docker Hub by default).
+    
+- **Better Integration**: Works seamlessly with AWS services (ECS, EKS, Lambda, etc.).
+    
+- **Managed Service**: AWS handles scaling, availability, and access controls.
+
+
+- In the AWS Console, search for **ECR**.  
+- Click on **Elastic Container Registry**.    
+- Click ==Create Repository==, name it (e.g. `flask-mysql`), and leave other settings as default. ✅ _Why?_: This is the “bucket” where we’ll store our Docker images in AWS. 
+ Once created, click the repository and select **“View Push Commands”** – this gives you all the necessary terminal commands for pushing your image.
+
+### 4. **Authenticate with ECR**
+
+- Copy the login command from AWS.
+- Paste it into your terminal.
+- This **logs Docker into your ECR repository**, not AWS as a whole.
+    
+
+ 5. **Build Your Docker Image**
+- Run the `docker build` command using your Dockerfile.  
+    Example:
+    `docker build -t flask-mysql .`
+    ✅ _Why?_: You need a Docker image locally before you can upload it.
+
+ 6.Tag the Docker Image
+
+- You must tag the image with your **ECR repository URL**.  
+    Example:
+    
+    `docker tag flask-mysql:latest [your-ecr-url]/flask-mysql:latest`
+    - - ✅ _Why?_: ECR requires the image to have its full registry path in the tag.
+
+ 7. Push the Image to ECR
+
+- Now, use the `docker push` command:
+    
+    `docker push [your-ecr-url]/flask-mysql:latest`
+    
+✅ _Why?_: This uploads your image to AWS, making it available anywhere in your cloud environment.
+
+### 8. **Check It on AWS**
+
+- Go back to AWS Console → ECR → Your repository.
+    
+- Refresh, and you’ll see the uploaded image listed.
+    
+
+---
+
+## 📥 Pulling the Image from ECR
+
+If you want to use this image later (on another machine or locally), just run:
+
+`docker pull [your-ecr-url]/flask-mysql:latest`
+
+---
+
+## 🚀 Run the Container
+
+Use the following to run the container:
+
+`docker run -p 5002:5002 [your-ecr-url]/flask-mysql:latest`
