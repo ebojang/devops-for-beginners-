@@ -33,7 +33,7 @@ Images are templates for creating containers.
 Images are immutable (meaning they don’t change once created) only way to
 change them is by recreating the image.
 Immutability ensures the application runs consistently no matter where it is deployed.
-Containers are running instances of images.
+Containers are running instances of images. They have an image + execution evironment + runtime instructions.
 **Docker file**- is a file used to build docker images. Contains a series of instructions
 that docker uses to assemble an image.
 
