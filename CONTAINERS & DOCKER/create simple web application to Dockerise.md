@@ -9,7 +9,7 @@ touch app.py
 application code 
 
 1) first we import the flask ( from flask import Flask) - this helps in creating a new flask application instance.
-2) set a route (@app.route('/') - **We define a route for the root URL which is forward slash**('/')
+2) set a route (@app.route('/') - **We define a route for the root URL which is forward slash**('/'). this listens for HTTP GET requests to the root URL (`/`).
 3) when someone visits the url (==@app.route('/')== the hello_world function is called (def hello_world(). which in return gives back ""i am a king!"
 4) application is then run by using app.run
 5) variable is used here to run application on our local host which is 0.0.0.0 and using port 5000. this allows us to look at local host 5000 for this application.
