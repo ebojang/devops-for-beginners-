@@ -3,7 +3,7 @@
 1. **Create a Dockerfile** in your project folder (capital “D”, no extension example **touch Dockerfile**).
     Dockerfile is a text file that contains a series of instructions on how to build a container image
 2. **Dockerfile contents:**
-    - `FROM python:3.8-slim` → Base image with minimal Python.
+    - `FROM python:3.8-slim` → Base image with minimal Python.(this tells docker what base image to use for the final image). 
     - `WORKDIR /app` → Set working directory inside container.
     - `COPY . .` → Copy all files from current folder to container.
     - `RUN pip install flask` → Install Flask in container.
