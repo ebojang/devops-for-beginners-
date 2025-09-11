@@ -5,7 +5,7 @@
 2. **Dockerfile contents:**
     - `FROM python:3.8-slim` → Base image with minimal Python.(this tells docker what base image to use for the final image). 
     - `WORKDIR /app` → Set working directory inside container.
-    - `COPY . .` → Copy all files from current folder to container.
+    - `COPY . .` → Copy all files from current folder/directory into the container.
     - `RUN pip install flask` → Install Flask in container.
     - `EXPOSE 5002` → Make port 5002 available externally.
     - `CMD ["python", "app.py"]` → Command to start the app.
