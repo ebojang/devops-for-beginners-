@@ -255,3 +255,23 @@ git status
 to undo a commit message that has not been pushed yet, run
 git reset --soft HEAD~1
 This keeps your changes in staging 
+
+VIEWING HISTORY 
+git log: shows fullcommit history
+git log --oneline --graph : shows clean visual summary layout
+git show <commit> : helps view a specific commit 
+git diff: compare unstaged changes with the last commit 
+git diff --staged :compares your staged changes with the last commit
+git blame <file>: shows who last changed each line 
+
+
+
+
+
+
+
+
+
+
+
+
