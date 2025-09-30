@@ -124,13 +124,17 @@ git commit -am (is another shortcut for adding and committing at the same time)
 
 Branches on git are like a timeline. branch name have to be unique eg could be ticket ref-increase RDS size)
 
+BRANCHING 101
+
 HOW TO CREATE MULTIPLE BRANCHES IN GIT
 
-git branch (branch name)
+git branch (branch name) - shows or list branches you have 
 enter git branch (the new branch should now be under the master branch)
 
 TO SWITCH TO NEW BRANCH
 git checkout/switch (new branch name)
+git switch -c <branch name>
+git switch -  switches to an existing branch
 git log --oneline
 the head now points at the new branch . example 
 master 
@@ -144,7 +148,7 @@ Head always points to where the branch is currently at
 always commit before switching to another branch
 
 MERGING BRANCHES
-
+in Git merge, you combine changes from one branch to another
 There are two types of merging branches 
 fast forward and not fast forward merge 
 
@@ -177,7 +181,10 @@ you will see
 ++= testfile.txt (during staging)
 
 GIT STASH 
-git stash is like a temporary shelf/storage  where you can keep your code 
+git stash is like a temporary shelf/storage  where you can keep your code . it trmporarily save uncommitted changes 
+
+git stash list - view all stashes
+git stash apply - reapply latesh stash and keeps in 
 note:
 conflicting changes do not allow to switch branch without commit 
 error code 
