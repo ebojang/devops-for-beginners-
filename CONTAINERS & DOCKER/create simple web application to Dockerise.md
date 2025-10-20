@@ -74,6 +74,7 @@ go to your terminal on command line  and type
 docker build command (initiates the build process) -t hello-flask (-t flag tags the image with a name. in this case we are naming the image hello-flask) followed by . (the . represents current directory and ask the docker to look into the current directory to look for the docker file there. if the direcotory is somewhere else. use ./hello-slask )
 
 docker build -t hello- flask .
+docker run -d -p 5000:5000 hello-task
 
 MAKE OUR IMAGE LIGHTER: MULTISTAGE BUILDS 
 

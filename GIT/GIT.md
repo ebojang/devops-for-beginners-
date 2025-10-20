@@ -3,7 +3,8 @@ GIT: is a software
 Github: is a service provider that host git online. example when you work on a git and wants to save it on the cloud, that's when github is used.
 
 
-Git is a distributed version control system used to track changes in source code during software development. 
+Git is a distributed version control system used to track changes in source code during software development.
+Git is a CLI version control tool used on your local device. 
 
 
 **WHAT IS VERSION CONTROL?**
@@ -104,13 +105,14 @@ The .git folder is a hidden folder and every repo have a .git folder.
 
 1) **git branch** (branch name have to be unique eg could be ticket ref-increase RDS size)
 2) **git checkout** (ref-increase RDS size) -  this moves you from the main branch to dev or feature branch 
-MADE CHANGES AND THEN CONTINUE THE STEPS BELOW 
-3) **Git add** (your file path)
-4) **Git commit -m****  (commit message) . the commit messages are the reason you are making changes eg to stop failing of RDS instances   
+MADE CHANGES AND THEN CONTINUE THE STEPS BELOW
+**Git switch -c <branch>: modern version**
+4) **Git add** (your file path)
+5) **Git commit -m****  (commit message) . the commit messages are the reason you are making changes eg to stop failing of RDS instances   
 NOTE: Git commit message is a complete unit of work 
-5) **Git push** this pushes it back to main branch 
+6) **Git push** this pushes it back to main branch 
 note: before pushing to main branch/merging, a merge request or pull request is done as a checklist. A second pair of eye is needed before pushing to main/production branch
-6) Git pull -  updates local computer and create a version 2 on main production.
+7) Git pull -  updates local computer and create a version 2 on main production.
 
 **what is a merge conflict?**
 merge conflict is a conflict between 2 pulls. 
@@ -122,13 +124,17 @@ git commit -am (is another shortcut for adding and committing at the same time)
 
 Branches on git are like a timeline. branch name have to be unique eg could be ticket ref-increase RDS size)
 
+BRANCHING 101
+
 HOW TO CREATE MULTIPLE BRANCHES IN GIT
 
-git branch (branch name)
+git branch (branch name) - shows or list branches you have 
 enter git branch (the new branch should now be under the master branch)
 
 TO SWITCH TO NEW BRANCH
 git checkout/switch (new branch name)
+git switch -c <branch name>
+git switch -  switches to an existing branch
 git log --oneline
 the head now points at the new branch . example 
 master 
@@ -142,7 +148,7 @@ Head always points to where the branch is currently at
 always commit before switching to another branch
 
 MERGING BRANCHES
-
+in Git merge, you combine changes from one branch to another
 There are two types of merging branches 
 fast forward and not fast forward merge 
 
@@ -192,7 +198,10 @@ you will see
 ++= testfile.txt (during staging)
 
 GIT STASH 
-git stash is like a temporary shelf/storage  where you can keep your code 
+git stash is like a temporary shelf/storage  where you can keep your code . it trmporarily save uncommitted changes 
+
+git stash list - view all stashes
+git stash apply - reapply latesh stash and keeps in 
 note:
 conflicting changes do not allow to switch branch without commit 
 error code 
@@ -275,3 +284,23 @@ git status
 to undo a commit message that has not been pushed yet, run
 git reset --soft HEAD~1
 This keeps your changes in staging 
+
+VIEWING HISTORY 
+git log: shows fullcommit history
+git log --oneline --graph : shows clean visual summary layout
+git show <commit> : helps view a specific commit 
+git diff: compare unstaged changes with the last commit 
+git diff --staged :compares your staged changes with the last commit
+git blame <file>: shows who last changed each line 
+
+
+
+
+
+
+
+
+
+
+
+
