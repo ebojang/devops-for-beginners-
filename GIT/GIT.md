@@ -158,6 +158,23 @@ git merge (dev branch name / secondary branch name)
 DELETE GIT BRANCH 
 git branch -d (branch name)
 
+UNDOING CHANGES IN GIT 
+
+git restore - fix local unstaged or staged changes. This restore the file to it's last committed state.
+ git restore <file or filename>
+ 
+undo staged changes (you already ran git add)
+git restore --staged <file name>
+This removed the file from staging but keeps your edits in the working directory
+
+Undo a commit (not pushed yet)
+git reset --soft HEAD~1	Undo last commit, keep changes staged
+git reset --mixed HEAD~1	Undo commit, keep changes unstaged
+git reset --hard HEAD~1	Undo commit and delete all changes ⚠️ (dangerous!)
+
+Undo a pushed commit (already on remote)
+You accidentally pushed a bad commit to a shared branch like `main`.
+git revert HEAD
 
 GIT COMMAND
 
@@ -202,9 +219,12 @@ git reflog (takes you back to where you were )
 git log --oneline --graph -all  - this gives you the full view. this is great for debugging merges and tracking branches. it helps you see what is really happening under the hood.
 
 
+What does git reflog show?
+Ans: Every HEAD movement including deleted commits
+GIT 
 GIT REBASE 
 
-Git rebase can be use as am alternative to merge or 
+Git rebase can be use as an alternative to merge or 
 it can also be used as a clean-up tool (clean up commits)
 
 NOTE

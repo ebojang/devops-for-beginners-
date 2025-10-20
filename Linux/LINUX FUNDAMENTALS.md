@@ -23,10 +23,14 @@ support
 
 ==**SORTING FILES== 
 sorting files by time. Run ls -ltu or ltc
-sort files by size: ls -s or ls -lS
+sort files by size:
+ls -s or ls -lS
 ls -lS - sort files by size , largest are going first
 
 ==**Argument human readable or better -h**== 
+ This argument is `--human-readable` or -h
+ ls -lh  list directory contents with human-readable file sizes.
+ls -lSh list directory contents with human-readable file sizes, largest one on top.
 ls -lSh or ls -lh
 
 **
@@ -38,6 +42,9 @@ ls -lSh or ls -lh
 - ~ (home directory). This directory defaults to your “home directory”. Such as /home/pete.
 - - (previous directory). This will take you to the previous directory you were just at.
 **Cd ..** -  takes you one directory up  
+`cd parentdir/childdir023` .
+- `cd ../../../var/log/nginx`
+- `cd /var/log/nginx`
 
 **Pwd (print/ present working directory)** – shows your current working directory 
 touch -  allows you to create new empty files.
@@ -289,7 +296,7 @@ if user have rwe permission, this will be, group have read permission+ execute a
 
 **Grouping permissions using symbolic operators:**
 ~ chmod users and groups=rw others=r 
-~ chmid ug+rw,o=r test.txt
+~ chmod ug+rw,o=r test.txt
 
 **owner**: *- the owner of the object. It doesn't mean who created it, but who owns it at this moment.
 - Group. Owner belongs to the group (of users). This inforation is here too. This means that our 'groupmates' have specific access to the file*
