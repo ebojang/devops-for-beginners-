@@ -51,3 +51,14 @@ inside each statement:
 - **Action** – _What_ they can do  or cannot do (e.g., `s3:GetObject`, `ec2:StartInstances`).
 - **Resource** – _list of resources to which the actions applied to (ARN of bucket, instance, etc.).    
 - **Condition** _(optional)_ – _When/if_ the rule applies (e.g., specific IP, time, MFA).
+
+- HOW TO ACCESS AWS?
+- * AWS Management console, AWS CLI AND AWS SOFTWARE Developer Kit
+ 
+  * note:
+  * Access key ID - acts as your username
+  * Secret Access Key - act as your password
+  * * Access keys are used to authenticate when using AWS cli or AWS SDK
+   
+    On CLI, you can run:
+    aws iam list-users : this will show list of users you have   
