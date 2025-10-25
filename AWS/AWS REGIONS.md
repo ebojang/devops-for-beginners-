@@ -12,12 +12,12 @@ Each availability zone has it's own discrete power supply, networking and connec
 
 IDENTITY & ACCESS MANAGEMENT 
 
-Users - people within your organisation, and can  r grouped
+Users - people within your organisation
 Groups: only contain users not other groups . 
 
 IAM PERMISSIONS IN AWS 
 * users or groups can be assigned policies and these policies define the permissions of the users.
-* Apply the ;east privilege principle.*
+* Apply the least privilege principle.*
 
 IAM Policies Inheritance
 * permissions are passed down to users based on their groups.
@@ -51,3 +51,39 @@ inside each statement:
 - **Action** – _What_ they can do  or cannot do (e.g., `s3:GetObject`, `ec2:StartInstances`).
 - **Resource** – _list of resources to which the actions applied to (ARN of bucket, instance, etc.).    
 - **Condition** _(optional)_ – _When/if_ the rule applies (e.g., specific IP, time, MFA).
+
+- HOW TO ACCESS AWS?
+- * AWS Management console, AWS CLI AND AWS SOFTWARE Developer Kit
+ 
+  * note:
+  * Access key ID - acts as your username
+  * Secret Access Key - act as your password
+  * * Access keys are used to authenticate when using AWS cli or AWS SDK
+   
+    On CLI, you can run:
+    aws iam list-users : this will show list of users you have
+
+     IAM roles let AWS services (like EC2, Lambda, or CloudFormation) securely access other AWS resources without using long-term credentials
+ IAM roles = temporary, controlled access for AWS services — secure, flexible, and no exposed credentials.
+
+IAM SECURITY TOOLS
+1) IAM Credentials Report (account-level)
+* a report that lists all your account's users and the status of their various credentials.
+2) IAM Access Advisor (user-level)
+  * access advisor shows the service permissions granted to a user and when those services were last accessed.
+
+
+
+AMAZON COMPUTE 
+
+EC2- Elastic Compute Service OR Cloud 
+* EC2 is an Infrastructure as a Service (IaaS) : renting virtual machine from AWS, data is stored ina virtual drive .
+* EC2 can be scaled using an auto-scaling group (ASG) 
+
+EC2 USER DATA SCRIPT
+* This is a script that runs when you launch or start an EC2 instance.
+  USES OF EC2 DATA SCRIPT:
+  * EC2 data scripts can be used to automate boot tasks such as : installing updates, installing software etc
+
+
+
