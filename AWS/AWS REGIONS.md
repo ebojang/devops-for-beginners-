@@ -86,4 +86,17 @@ EC2 USER DATA SCRIPT
   * EC2 data scripts can be used to automate boot tasks such as : installing updates, installing software etc
 
 
+RUNNING A WEBSERVER ON EC2 INSTANCE 
+
+1) Launch an EC2 instance > configure access key pair > network security: security group (firewall rules) enable ssh and http port > configure storage > add user data script
+2)  Add User Data Script (Automation):Add the following **bash script** under **Advanced Details → User Data**.  
+This script runs automatically on instance startup and sets up a web server.
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello  from $(hostname -f)</h1>" > /var/www/html/index.html
+NOTE:
+When you stop and start an instance, a new public IP address is assigned. 
 
