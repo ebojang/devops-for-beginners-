@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS REGIONS.md",
+                "file": "AWS/AWS REGIONS.md",
                 "mode": "source",
                 "source": false
               },
@@ -169,14 +169,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fcb4618d73980cf",
+  "active": "3f28c091e773ebd3",
   "lastOpenFiles": [
+    "Untitled",
     "OVERTHEWHIRE BANDIT GAME/Bandit game command.md",
     "Linux/LINUX FUNDAMENTALS.md",
     "CONTAINERS & DOCKER/Container & Docker.md",
     "Networking in DevOps/Using etc host files.md",
     "Networking in DevOps/DOMAIN NAME SYSTEM (DNS).md",
-    "AWS REGIONS.md",
+    "AWS/AWS REGIONS.md",
     "CONTAINERS & DOCKER/Docker Inspect Container",
     "AWS",
     "LINUX DEBUGGING.md",
@@ -200,7 +201,6 @@
     "Networking in DevOps/Networking Fundamentals.md",
     "Screenshot 2025-08-07 233038.png",
     "DEVOPS PROJECTS",
-    "COMMON NETWORK ISSUES.md",
     "CONTAINERS & DOCKER",
     "Pasted image 20250630211322.png",
     "Pasted image 20250615143352.png",
