@@ -61,4 +61,24 @@ inside each statement:
   * * Access keys are used to authenticate when using AWS cli or AWS SDK
    
     On CLI, you can run:
-    aws iam list-users : this will show list of users you have   
+    aws iam list-users : this will show list of users you have
+
+     IAM roles let AWS services (like EC2, Lambda, or CloudFormation) securely access other AWS resources without using long-term credentials
+ IAM roles = temporary, controlled access for AWS services — secure, flexible, and no exposed credentials.
+
+IAM SECURITY TOOLS
+1) IAM Credentials Report (account-level)
+* a report that lists all your account's users and the status of their various credentials.
+2) IAM Access Advisor (user-level)
+  * access advisor shows the service permissions granted to a user and when those services were last accessed.
+
+
+
+
+
+
+
+
+
+
+
