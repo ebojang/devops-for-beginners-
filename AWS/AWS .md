@@ -1,4 +1,6 @@
-AWS region is a cluster of data canters.
+AWS MODULE 
+AWS REGIONS
+Region is a cluster of data canters.
 
 Things to consider when choosing AWS regions:
 * compliance 
