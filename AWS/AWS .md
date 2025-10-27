@@ -106,3 +106,17 @@ SECURITY GROUPS AND CLOUD NETWORKING
 Security groups (SG) control how traffic is allowed into or out of our resources or  instances. 
 They act as virtual firewalls and the only traffic that reaches the instance is the traffic allowed by the security group.
 Security groups are stateful. For example, if you send a request from an instance, the response traffic for that request is allowed to reach the instance regardless of the inbound security group rules. Responses to allowed inbound traffic are allowed to leave the instance, regardless of the outbound rules.
+
+Security groups can be attached to multiple instances.
+note: 
+All inbound traffic are blocked by default
+all outbound traffic are authorised by default.
+
+CLASSIC PORTS
+* 22 =  SSH - log into linux instance
+* 21 + File Transfer Protocol (FTP) - upload file into file share
+* 22 + Secure File Transfer Protocol (SFTP) -  Upload files using SSH
+* 80 = HTTP - access unsecured website
+* 443 = HTTPS - access secured website
+* 53 = DNS - for DNS queries and resolving
+* 3389 = RDP - Log into windows instance 
