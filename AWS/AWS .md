@@ -102,3 +102,7 @@ echo "<h1>Hello  from $(hostname -f)</h1>" > /var/www/html/index.html
 NOTE:
 When you stop and start an instance, a new public IP address is assigned. 
 
+SECURITY GROUPS AND CLOUD NETWORKING
+Security groups (SG) control how traffic is allowed into or out of our resources or  instances. 
+They act as virtual firewalls and the only traffic that reaches the instance is the traffic allowed by the security group.
+Security groups are stateful. For example, if you send a request from an instance, the response traffic for that request is allowed to reach the instance regardless of the inbound security group rules. Responses to allowed inbound traffic are allowed to leave the instance, regardless of the outbound rules.
