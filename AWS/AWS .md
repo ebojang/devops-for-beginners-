@@ -119,4 +119,24 @@ CLASSIC PORTS
 * 80 = HTTP - access unsecured website
 * 443 = HTTPS - access secured website
 * 53 = DNS - for DNS queries and resolving
-* 3389 = RDP - Log into windows instance 
+* 3389 = RDP - Log into windows instance
+
+
+AWS NETWORKING 
+ PRIVATE AND PUBLIC IP 
+ Private IP means a machine can be identified on the inetrnet (www). eg your home router external ip address.
+ public ip is unique over the web. 
+
+PRIVATE IP
+* Private IP is only used inside a private network eg home or office
+* must be inique across private network  and this can be used to identify machines on only the private network 
+
+NOTE 
+* when you stop and start an ec2 instance, it can be assigned a new ip address.
+* public ip addresses are assigned dynamically by AWS
+* to keep a fix public ip, ELASTIC IP is needed.
+* an ELASTIC IP ADDRESS is a public ip4 address you own as long as you don't delete it.
+* Elastic IP are only charged when not in used. 
+
+importance of elastic ip address?
+* by using elastic ip address, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account. 
