@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/AWS REGIONS.md",
+                "file": "AWS/AWS .md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AWS REGIONS"
+              "title": "AWS"
+            }
+          },
+          {
+            "id": "89f295eed39ac3ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GIT/GIT.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GIT"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,8 +184,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3f28c091e773ebd3",
+  "active": "89f295eed39ac3ce",
   "lastOpenFiles": [
+    "AWS STORAGE.md",
+    "AWS/AWS .md",
     "Untitled",
     "OVERTHEWHIRE BANDIT GAME/Bandit game command.md",
     "Linux/LINUX FUNDAMENTALS.md",
@@ -198,7 +215,6 @@
     "Bash/Change Path Permanently.md",
     "Bash/FUNCTIONS.md",
     "Networking in DevOps/OSI MODEL.md",
-    "Networking in DevOps/Networking Fundamentals.md",
     "Screenshot 2025-08-07 233038.png",
     "DEVOPS PROJECTS",
     "CONTAINERS & DOCKER",
@@ -214,7 +230,6 @@
     "Linux/Pasted image 20250520145608.png",
     "INTERVIEW PREP",
     "ECS PROJECTS",
-    "OVERTHEWHIRE BANDIT GAME",
-    "Linux"
+    "OVERTHEWHIRE BANDIT GAME"
   ]
 }
