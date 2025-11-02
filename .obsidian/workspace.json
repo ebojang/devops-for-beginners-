@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT/GIT.md",
+                "file": "AWS STORAGE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GIT"
+              "title": "AWS STORAGE"
+            }
+          },
+          {
+            "id": "bf993c9e51a2ae78",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "INTERVIEW QUESTIONS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "INTERVIEW QUESTIONS"
             }
           }
         ],
@@ -186,8 +200,11 @@
   },
   "active": "89f295eed39ac3ce",
   "lastOpenFiles": [
+    "INTERVIEW QUESTIONS.md",
     "AWS STORAGE.md",
+    "Possible Interview questions",
     "AWS/AWS .md",
+    "GIT/GIT.md",
     "Untitled",
     "OVERTHEWHIRE BANDIT GAME/Bandit game command.md",
     "Linux/LINUX FUNDAMENTALS.md",
@@ -198,7 +215,6 @@
     "CONTAINERS & DOCKER/Docker Inspect Container",
     "AWS",
     "LINUX DEBUGGING.md",
-    "GIT/GIT.md",
     "LINUX COMMAND CHEAT SHEET.md",
     "CONTAINERS & DOCKER/CODERCO CONTAINER CHALLENGE.md",
     "CONTAINERS & DOCKER/create simple web application to Dockerise.md",
@@ -214,7 +230,6 @@
     "Bash/IF statement.md",
     "Bash/Change Path Permanently.md",
     "Bash/FUNCTIONS.md",
-    "Networking in DevOps/OSI MODEL.md",
     "Screenshot 2025-08-07 233038.png",
     "DEVOPS PROJECTS",
     "CONTAINERS & DOCKER",
@@ -229,7 +244,6 @@
     "Linux/Pasted image 20250531171150.png",
     "Linux/Pasted image 20250520145608.png",
     "INTERVIEW PREP",
-    "ECS PROJECTS",
-    "OVERTHEWHIRE BANDIT GAME"
+    "ECS PROJECTS"
   ]
 }

@@ -37,8 +37,17 @@ LOAD BALANCING
 Elastic Load Balancers (ELB)
 Elastic load balancer is a managed load balancer by AWS:
 AWS takes care of upgrades, maintenance, high availability etc 
+ELB monitors server health, automatically routing traffic away from unhealthy instances to maintain application availability and performance.
 
 Reverse Proxy Server -  sits between client devices and backend servers. acting as an intermediary for requests from client. when a client sends in a request for a resource, such as web page or an application, the reverse proxy receives the request on behalf of the backend servers. it then forwards the request to appropriate backend server based on predefined rules or configuration.
  * reverse proxy enhance security y serving as a barrier between the internet and backend servers. it filters out malicious traffic such as hacking attempts.*
+ * reverse proxy route request based on content, paths, caching and security filtering.
 
 HEALTH CHECKS IN LOAD BALANCER
+A **health check** works by having the load balancer periodically send a request (e.g., to a `/health` endpoint on a specific port) to each backend instance. If the instance returns a **200 OK** response, it’s marked healthy; if it fails to respond or returns an error, it’s marked **unhealthy** and temporarily removed from the traffic pool.
+
+TYPES OF LOAD BALANCERS 
+1) Classic Load Balancer (CLB) - supports basic HTTP, HTTPS, TCP, and SSL traffic. Operates at both Layer 4 and Layer 7
+2) Application Load Balancer (ALB) - operates at **Layer 7 (Application Layer)** and is optimized for **HTTP, HTTPS, and WebSocket** traffic. It supports **content-based routing** (e.g., URLs, headers, cookies) and is ideal for **microservices**, **containers**, and **modern web applications
+3) Network Load Balancer (NLB) - operates at **Layer 4 (Transport Layer)**, handling **TCP, UDP, and TLS** traffic with **ultra-low latency** and the ability to manage **millions of requests per second**.
+4) **Gateway Load Balancer (GLB or GWLB)** – Works at **Layer 3 (Network Layer)**, designed to deploy and manage **third-party virtual network appliances** such as firewalls, intrusion detection systems (IDS), and traffic analyzers within a **VPC**.
