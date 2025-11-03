@@ -49,5 +49,48 @@ A **health check** works by having the load balancer periodically send a request
 TYPES OF LOAD BALANCERS 
 1) Classic Load Balancer (CLB) - supports basic HTTP, HTTPS, TCP, and SSL traffic. Operates at both Layer 4 and Layer 7
 2) Application Load Balancer (ALB) - operates at **Layer 7 (Application Layer)** and is optimized for **HTTP, HTTPS, and WebSocket** traffic. It supports **content-based routing** (e.g., URLs, headers, cookies) and is ideal for **microservices**, **containers**, and **modern web applications
-3) Network Load Balancer (NLB) - operates at **Layer 4 (Transport Layer)**, handling **TCP, UDP, and TLS** traffic with **ultra-low latency** and the ability to manage **millions of requests per second**.
+3) Network Load Balancer (NLB) - operates at **Layer 4 (Transport Layer)**, handling **TCP, UDP, and TLS** traffic with **ultra-low latency** and the ability to manage **millions of requests per second**.NLBs provide **static IP addresses per Availability Zone (AZ)** and can use **Elastic IPs** for predictable and consistent endpoints—useful for security, firewall rules, or fixed client connections. 
 4) **Gateway Load Balancer (GLB or GWLB)** – Works at **Layer 3 (Network Layer)**, designed to deploy and manage **third-party virtual network appliances** such as firewalls, intrusion detection systems (IDS), and traffic analyzers within a **VPC**.
+
+
+STICKY SESSIONS 
+**Sticky Sessions (Session Affinity)** allow a load balancer to route a client’s requests to the **same backend instance** for the duration of their session.
+While sticky sessions improve session continuity, they can **reduce load distribution efficiency**, as some instances may become overloaded if many users are “stuck” to them.
+
+
+**SSL (Secure Socket Layer)** and **TLS (Transport Layer Security)** are protocols that provide **encryption for data in transit** between clients (like browsers) and servers — often through load balancers.
+These certificates are issued by trusted third-party organizations called **Certificate Authorities (CAs)** such as **DigiCert, GlobalSign, GoDaddy, Comodo, and Let’s Encrypt**.
+
+SSL and TLS are important because they **validate the identity of websites** and enable browsers to trust that the site is legitimate and secure.
+
+Load Balancer – SSL Certificate (SSL/TLS Management)
+The traffic flow works as follows:
+- The user connects to the load balancer via **HTTPS** (encrypted).
+- The load balancer terminates the SSL connection and forwards the request via **HTTP** within the private **VPC** to the EC2 instance.
+
+
+Auto Scaling Groups
+**Auto Scaling Group (ASG)** - is a service that automatically manages the number of EC2 instances in a group based on demand. It helps applications handle traffic changes by adding or removing instances as needed.
+
+### **Key Attributes of an Auto Scaling Group (ASG)**
+
+- **Launch Templates**: Define how new EC2 instances are created.
+- **AMI (Amazon Machine Image)**: Ensures all instances have the same pre-configured setup.
+- **Instance Type**: Determines the hardware resources (CPU, memory, storage).
+- **EC2 User Data**: Optional startup scripts for tasks like software installation or configuration.
+- **EBS Volumes**: Persistent storage attached to each instance.
+- **Security Groups**: Act as virtual firewalls controlling inbound/outbound traffic.
+- **SSH Key Pair**: Enables secure remote access to instances.
+- **IAM Roles**: Grant permissions for instances to interact with other AWS services securely.
+- **Network & Subnets**: Specify where instances are launched within your VPC.
+- **Load Balancer Info**: Automatically registers new instances with a load balancer.
+- **ASG Size Settings**: Define _minimum_, _maximum_, and _initial_ instance counts.
+- **Scaling Policies**: Control when to scale in or out based on performance or demand.
+
+Auto Scaling – CloudWatch Alarms & Scaling (Monitoring and Automation)
+**CloudWatch Alarms** continuously monitor metrics like **CPU usage**, **memory**, or **custom-defined metrics** across Auto Scaling Groups (ASGs).
+When a metric crosses a threshold:
+- A **scale-out policy** adds instances during high load to maintain performance.
+- A **scale-in policy** removes instances when demand drops, reducing costs.
+
+This integration enables **automatic, real-time scaling** based on live system performance, ensuring you **only pay for the resources you need**.
