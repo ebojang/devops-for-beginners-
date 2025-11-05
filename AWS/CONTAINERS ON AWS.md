@@ -43,3 +43,22 @@ When setting up an ECS cluster, you choose a **launch type**, which defines how 
 - You only define **task definitions** (CPU, memory, and networking requirements).
 - AWS automatically provisions and scales resources as needed.
 - **Best for:** Teams that want to focus on applications, not servers, and need scalability without managing infrastructure.
+
+Amazon ECS Service Auto Scaling dynamically adjusts the number of running ECS tasks based on demand. This helps maintain performance during traffic spikes and reduces costs during low usage.
+1) Target Tracking Scaling: Automatically adjusts tasks to maintain a target metric (e.g., CPU at 40%).
+2) Step Scaling: Responds to specific thresholds.
+3) Scheduled Scaling: Predefined scaling based on predictable traffic patterns.
+
+
+
+AMAZON ELASTIC KUBERNETES SERVICE (EKS)
+Amazon EKS (Elastic Kubernetes Service) is a fully managed service that allows you to run Kubernetes on AWS without managing the underlying infrastructure. AWS handles the Kubernetes control plane, including updates, patching, and scaling.
+
+
+EKS vs ECS:
+ECS is AWS-native, simpler, and tightly integrated with AWS services.
+EKS is Kubernetes-based, making it cloud-agnostic and portable across platforms like GCP and Azure.
+
+
+
+
