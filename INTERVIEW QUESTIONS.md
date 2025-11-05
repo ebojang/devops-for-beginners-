@@ -58,3 +58,38 @@ With EC2, scaling requires adding or removing EC2 instances manually or via auto
 
 18) **3. What are ECS task definitions, and why are they important in Fargate?**   
 A task definition is a blueprint that defines how a container should run, including CPU, memory, networking, and image details. In Fargate, task definitions are essential because they tell AWS exactly what resources to allocate for your containers since there are no EC2 instances to manage manually.
+
+
+19) Why does the ECS Agent need permissions?
+    To perform tasks like sending logs, pulling container images, and accessing secrets securely.
+
+
+20)  Why is it important to use IAM roles in ECS?
+To ensure secure and controlled access to AWS services, following the principle of least privilege.
+
+21) How do you assign an ECS Task Role to a container?
+A: By specifying the IAM role in the ECS task definition under the taskRoleArn field.
+
+22) How does using separate ECS Task Roles improve security?
+A: It allows each container to have only the permissions it needs, reducing the risk of unauthorized access or misuse of AWS resources.
+
+23) : What happens if the EC2 Instance Profile lacks necessary permissions?
+A: The ECS Agent may fail to perform tasks like sending logs or pulling images, leading to container launch failures or monitoring issues.
+
+24) What is ECS Service Auto Scaling?
+    It’s a feature that automatically adjusts the number of ECS tasks based on metrics like CPU usage or traffic, helping maintain performance and reduce costs.
+
+25) What is target tracking in ECS auto scaling?
+Target tracking keeps a specific metric, like CPU utilization, at a desired level by automatically scaling tasks up or down
+
+
+
+
+
+
+
+
+
+
+
+	
