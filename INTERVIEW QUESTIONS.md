@@ -82,10 +82,20 @@ A: The ECS Agent may fail to perform tasks like sending logs or pulling images, 
 25) What is target tracking in ECS auto scaling?
 Target tracking keeps a specific metric, like CPU utilization, at a desired level by automatically scaling tasks up or down
 
+26) What does “serverless” mean in AWS?
+In AWS, “serverless” means you don’t need to manage or provision servers yourself. AWS runs your code or services automatically, scaling as needed. You just write your code—like in AWS Lambda—and AWS handles everything behind the scenes.
 
+27) **Q1:** How does the number after the slash (the subnet mask) affect the range of IPs in CIDR notation?
+The number after the slash specifies how many bits are fixed in the network portion of the address. A **smaller number** (like `/8`) means more bits are available for hosts, resulting in a **larger IP range**, while a **larger number** (like `/30`) means fewer host bits and thus a **smaller range**
 
+28) What does VPC stand for and what is it used for in AWS?  
+**A1:** VPC stands for _Virtual Private Cloud_. It’s used to create an isolated private network within AWS where you can launch and manage AWS resources securely.
 
+29) Why should your VPC CIDR range not overlap with other networks?  
+**A1:** Overlapping CIDR ranges cause routing conflicts, preventing proper communication between networks (like between your corporate network and AWS VPCs).
 
+30) Why does AWS reserve specific IP addresses in every subnet?  
+**A1:** They’re used for internal networking — such as routing (`.1`), DNS services (`.2`), amazon vpc router
 
 
 

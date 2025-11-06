@@ -62,3 +62,14 @@ EKS is Kubernetes-based, making it cloud-agnostic and portable across platforms 
 
 
 
+AWS SEVERLESS computing 
+
+in severless computing, developers simply write and deploy code, while the cloud provider (like AWS) handles the underlying infrastructure.
+In **AWS**, this is primarily achieved through **AWS Lambda**, where code runs as functions triggered by specific events—this model is known as **Function-as-a-Service (FaaS)**. Users are billed only when their functions run.
+
+A key clarification: _serverless doesn’t mean the absence of servers_—servers still exist, but they are fully managed by AWS. The main benefit is that developers can **focus purely on writing business logic**, not infrastructure management.
+
+AWS LAMBDA
+A **serverless compute service** that runs your code automatically in response to events or triggers.
+Fully **automatic**; Lambda instantly adjusts to the number of incoming requests (from one to millions).
+Lambda is ideal for **event-driven, short-duration workloads** (e.g., file uploads, API triggers, or scheduled tasks), w
