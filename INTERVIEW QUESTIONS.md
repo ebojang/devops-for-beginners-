@@ -88,18 +88,34 @@ In AWS, “serverless” means you don’t need to manage or provision servers y
 27) **Q1:** How does the number after the slash (the subnet mask) affect the range of IPs in CIDR notation?
 The number after the slash specifies how many bits are fixed in the network portion of the address. A **smaller number** (like `/8`) means more bits are available for hosts, resulting in a **larger IP range**, while a **larger number** (like `/30`) means fewer host bits and thus a **smaller range**
 
-28) What does VPC stand for and what is it used for in AWS?  
+28) **What does VPC stand for and what is it used for in AWS?**  
 **A1:** VPC stands for _Virtual Private Cloud_. It’s used to create an isolated private network within AWS where you can launch and manage AWS resources securely.
 
-29) Why should your VPC CIDR range not overlap with other networks?  
+29) **Why should your VPC CIDR range not overlap with other networks?**  
 **A1:** Overlapping CIDR ranges cause routing conflicts, preventing proper communication between networks (like between your corporate network and AWS VPCs).
 
-30) Why does AWS reserve specific IP addresses in every subnet?  
+30) **Why does AWS reserve specific IP addresses in every subnet?**  
 **A1:** They’re used for internal networking — such as routing (`.1`), DNS services (`.2`), amazon vpc router
 
+31) **What is an Internet Gateway (IGW) in AWS?**
+An Internet Gateway is a VPC component that allows resources like EC2 instances to send and receive traffic from the internet. It acts as a bridge between your VPC and the public internet
 
+32) **If you create and attach an Internet Gateway to a VPC, do instances automatically get internet access?**
+No. In addition to attaching an IGW, you must update the subnet’s route table to direct outbound traffic (`0.0.0.0/0`) to the IGW. Without the correct route, traffic will not reach the internet.
 
+33) **What are two key characteristics of an Internet Gateway, and how many can be attached to a VPC**?
+- An IGW is **horizontally scalable** and **highly available**, with no single point of failure.
+- Only **one Internet Gateway can be attached to a VPC** at a time, forming a dedicated connection between that VPC and the internet.
 
+32) why do we need a bastion host?
+Because private instances are **not directly reachable from the internet** for security reasons.  
+A bastion host allows administrators to **safely manage** those instances without exposing them publicly.
 
+33)  **Where is a Bastion Host usually placed in a VPC?**  
+It’s placed in a **public subnet** of the VPC so it can be accessed from the internet.  
+The private instances it connects to are located in a **private subnet**.
 
-	
+34) How do Bastion Host and Private Instance Security Groups work together?
+- The **Bastion Host’s security group** allows **SSH (port 22)** only from trusted IPs.
+- The **Private Instance’s security group** allows **SSH** only from the **Bastion Host’s private IP** or its **security group ID**.  
+    This ensures that only connections coming from the bastion can reach the private servers.

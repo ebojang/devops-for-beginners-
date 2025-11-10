@@ -41,3 +41,37 @@ AWS reserves 5 IP addresses in every subnet — these cannot be used by your ins
 - `.2` – Amazon DNS server
 - `.3` – Reserved for future use
 - `.255` – Broadcast address (not supported, but reserved)
+
+
+
+INTERNET GATEWAY (IGW)
+An **Internet Gateway (IGW)** is a component in AWS that enables resources within a **VPC (Virtual Private Cloud)**—such as EC2 instances or other IP-based services—to communicate with the **internet**.  
+It acts as the gateway for both inbound and outbound traffic between your VPC and the outside world.
+
+IGW is :
+- **Horizontally scalable**, meaning it can handle increasing traffic loads without manual scaling.
+- **Highly available and redundant**, ensuring no single point of failure.
+
+
+BASTION HOST
+
+- A **Bastion Host** is an EC2 instance that sits in a **public subnet**. 
+- A **bastion host** acts as a **secure gateway** to reach private instances safely.
+- It **does** have internet access — so you can SSH (connect) into it.
+- Once connected to the bastion, you can then **SSH into the private instances** inside the private subnet.
+
+HOW BASTION HOST WORKS 
+
+- **Bastion Host** → in **public subnet** (reachable from the internet).
+- **Private Instances** → in **private subnet** (no direct internet access).
+- **Admin** → connects to **Bastion Host** → then connects to **Private Instance**.
+
+
+What is a NAT Gateway?
+A **NAT Gateway** is an **AWS-managed service** that allows **instances in private subnets** to **access the internet** (for updates, patches, APIs, etc.) **without allowing inbound internet traffic** to reach them.
+
+It keeps **private instances secure** — they can reach the internet **outbound only**, not the other way around.
+* **AZ-specific:** each NAT Gateway is tied to one Availability Zone (AZ).
+    - For **redundancy**, you must deploy one per AZ.*
+* **Requires an Internet Gateway** to route traffic to the internet.*
+* **Cannot serve instances in the same subnet** — private instances must be in a **different subnet**.
