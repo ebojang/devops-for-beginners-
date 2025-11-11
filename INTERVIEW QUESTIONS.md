@@ -119,3 +119,45 @@ The private instances it connects to are located in a **private subnet**.
 - The **Bastion Host’s security group** allows **SSH (port 22)** only from trusted IPs.
 - The **Private Instance’s security group** allows **SSH** only from the **Bastion Host’s private IP** or its **security group ID**.  
     This ensures that only connections coming from the bastion can reach the private servers.
+
+34) What is the main purpose of a NAT Gateway or NAT Instance in AWS?
+Both allow instances in private subnets to connect to the internet for updates or downloads, while preventing inbound connections from the internet.
+
+35) **How does the availability of a NAT Gateway compare to a NAT Instance?**
+NAT Gateways are highly available within an Availability Zone, while NAT Instances need manual failover configuration to achieve similar redundancy.
+
+
+36) **Why might you choose a NAT Instance over a NAT Gateway?**
+You might choose a NAT Instance if you need more control over configuration, want to use it as a bastion host, or prefer a potentially cheaper but manually managed solution.
+
+37) **Explain the scalability and performance differences between a NAT Gateway and a NAT Instance?**
+A NAT Gateway automatically scales up to 100 Gbps to handle large amounts of traffic, while a NAT Instance’s throughput is limited by its EC2 instance type. Scaling a NAT Instance requires manually upgrading or adding instances.
+
+38) **How do security management practices differ between NAT Gateway and NAT Instance setups?**
+NAT Instances can be associated with security groups for fine-grained control, while NAT Gateways rely on AWS-managed security and routing rules—simpler but less customizable.
+
+39) **What is a Network Access Control List (NACL) in AWS?**
+NACL is a subnet-level firewall that controls inbound and outbound traffic using allow and deny rules.
+
+40)  **How is a NACL different from a Security Group?**
+NACLs are **stateless** (you must define both inbound and outbound rules), while Security Groups are **stateful** (return traffic is automatically allowed).
+
+41) **In what scenario would you use a NACL instead of or in addition to a Security Group?**
+You’d use a NACL when you want to **block or allow specific IP addresses or ranges** at the **subnet level**, affecting multiple instances at once — such as blocking malicious IPs across an entire network segment.
+
+
+42) **What happens if a NACL does not have an outbound rule allowing traffic?**
+The traffic will be **blocked**, even if the Security Group allows it, because NACLs are **stateless** and require explicit outbound rules.
+
+
+43) **Explain how traffic flows when an external client connects to an EC2 instance?**
+Inbound traffic first passes through the **NACL inbound rules** for the subnet. If allowed, it reaches the **Security Group inbound rules** for the instance. If both permit the traffic, it’s delivered. The return traffic follows the reverse path — and since SGs are stateful, their response is allowed automatically, but the NACL outbound rules must also allow it.
+
+44) **Why might an EC2 instance fail to access the internet even though its Security Group allows outbound traffic?**
+Because the **NACL outbound rules** may not allow the traffic. Since NACLs are stateless, they require explicit outbound permissions even if inbound rules exist.
+
+45) **Why might an organization use VPC Peering between departments?**
+To allow secure, internal communication between departmental VPCs (like Sales and Marketing) without exposing data to the public internet.
+
+46) **If communication between two peered VPCs isn’t working, what are the two most likely configuration issues?**
+Either the **route tables** haven’t been updated properly, or the VPCs have **overlapping CIDR ranges** preventing the peering connection.

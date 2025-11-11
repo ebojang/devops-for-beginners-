@@ -42,7 +42,17 @@ AWS reserves 5 IP addresses in every subnet — these cannot be used by your ins
 - `.3` – Reserved for future use
 - `.255` – Broadcast address (not supported, but reserved)
 
+**NETWORKING FUNDAMENTAL CONCEPT STATEFUL AND STATELSS:**
 
+**STATEFUL** -  a stateful firewall or system remembers the state of the network connections. 
+this means if you allow traffic in one direction (say inbound), the return traffic is automatically allowed -  even if you did not explicitly define a rule for it.
+Example, 
+You allow inbound traffic on port 80 (HTTP).When the instance replies to that traffic, the **outbound response** is automatically allowed.
+
+**STATELESS** - A **stateless** firewall or system does **not remember** any connection state.  
+Each packet is evaluated **independently**, based only on your defined rules.
+Example, 
+If you allow **inbound HTTP (port 80)** traffic, You must also explicitly allow **outbound HTTP response traffic** — otherwise, the return traffic will be blocked.
 
 INTERNET GATEWAY (IGW)
 An **Internet Gateway (IGW)** is a component in AWS that enables resources within a **VPC (Virtual Private Cloud)**—such as EC2 instances or other IP-based services—to communicate with the **internet**.  
@@ -75,3 +85,47 @@ It keeps **private instances secure** — they can reach the internet **outbound
     - For **redundancy**, you must deploy one per AZ.*
 * **Requires an Internet Gateway** to route traffic to the internet.*
 * **Cannot serve instances in the same subnet** — private instances must be in a **different subnet**.
+
+
+**NAT INSTANCE** is more controlled by customer, it's flexible and potentially low cost. However, it required manual management. 
+
+
+==**NETWORK ACCESS CONTROL LIST (NACL)**==
+A **Network Access Control List (NACL)** is a **stateless, subnet-level firewall** in AWS that controls **inbound and outbound traffic** using **allow and deny rules**. Each subnet is associated with one NACL — either the default one or a custom NACL you create.
+
+NOTE:
+NACL operates at subnet level, affecting all resources in that subnet
+stateless- unlike security groups, NACLs don't automatically allow return traffic - both inbound and outbound rules must be defined. 
+* Rules are numbered (1-32,766) - lower numbers have high priority
+* by default a new custom NACL denies all traffic until rules are added
+
+==Importance of NACL==
+Ideal for **blocking IP ranges or traffic types** across entire subnets, providing an **extra layer of network security** beyond Security Groups.
+
+**Security Groups (SGs)**
+Security group operates at the instance level (attached o ec2 instances).
+Security groups are stateful, meaning if an inbound request is allowed, the corresponding outbound response is automatically allowed. 
+
+**Traffic flow:**
+
+1. **Inbound:**
+    - Traffic first passes through the **NACL inbound rules**.
+    - If allowed, it reaches the **Security Group inbound rules** of the instance.
+    - If both permit it, the traffic is accepted.
+        
+2. **Outbound:**
+    - When an instance sends traffic out, it first goes through **Security Group outbound rules**.    
+    - Then it passes through **NACL outbound rules** before leaving the subnet.
+
+
+VPC PEERING 
+
+VPC peering allows two virtual private clouds (VPCs) to communicate with each other privately over AWS internal network without sending traffic over the public internet.
+When two VPCs are peered, resources (like EC2 instances, databases, etc.) in one VPC can communicate with resources in the other as though they were part of the same network.
+
+NOTE
+* The IP address ranges (CIDRs) of both VPCs must be **unique** — overlapping IP ranges will prevent peering.*
+* Non-transitive — must connect every pair that needs communication.
+* **Route Table Updates Required:**  
+After creating a peering connection, you must manually update **route tables** in each VPC’s subnets so traffic knows where to go.
+
