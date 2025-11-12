@@ -1,4 +1,4 @@
-
+ 
 Understanding CIDR (Classless Inter-Domain Routing)
 CIDR (Classless Inter-Domain Routing) is a method for allocating and identifying IP address ranges more efficiently than the old class-based system. A CIDR notation consists of an IP address followed by a slash and a number.
 The smaller the number after the slash, the **larger the range** of IPs covered. CIDR is widely used in networking, especially for configuring VPCs and security groups in cloud platforms like AWS.
@@ -129,3 +129,28 @@ NOTE
 * **Route Table Updates Required:**  
 After creating a peering connection, you must manually update **route tables** in each VPC’s subnets so traffic knows where to go.
 
+VPC ENDPOINTS
+VPC endpoints - privately connect your Virtual Private Cloud (VPC) to AWS services without sending traffic over the public internet
+
+Importance:
+VPC endpoints is secured as no need for public ips or NAT gateways.
+low latency 
+
+
+Types of VPC Endpoints 
+* Interface Endpoint -  uses private link , creates an Llastic Network Interface (ENI) in your subnet.
+* Gateway Endpoint - works only for S3 and Dynamo DB - this adds a route in your vpc route table pointing to the service.
+
+
+Egress-only Internet Gateway
+An egress-only internet gateway (EOIG) is an AWS networking component designed specifically for ipv6 traffic. 
+it's similar to Internet Gateway but only allows outbound traffic from your vpc to the internet for ipv6 addresses
+It blocks inbound traffic initiated from the internet, making it a security measure for IPv6-enabled resources.
+NOTE:
+For IPv6, NAT isn’t applicable because IPv6 addresses are globally unique and routable.
+
+
+How Egress-only internet gateway flows traffic:
+Instances in private subnets with IPv6 addresses send outbound requests.
+EOIG forwards these requests to the internet.
+Any inbound traffic that wasn’t initiated by the instance is blocked.
