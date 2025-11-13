@@ -154,3 +154,32 @@ How Egress-only internet gateway flows traffic:
 Instances in private subnets with IPv6 addresses send outbound requests.
 EOIG forwards these requests to the internet.
 Any inbound traffic that wasn’t initiated by the instance is blocked.
+
+
+IPV4 AND IPV6 ROUTING IN VPC 
+
+VPC supports dual-stack networking , meaning you can use IPV4, IPV6 or both.
+
+IPV4 ROUTING IN VPC
+* VPCs typically use private IPv4 CIDR blocks (e.g., 10.0.0.0/16)
+* Each subnet in the VPC is associated with a route table which define where traffic goes based on destination CIDR.
+* fir internal traffic: Routes point to local (the vpc itself)
+* for internet access, add a route 0.0.0.0/0 pointing to an **internal Gateway.
+* for private subnets needing outbound ipv4 internet access, traffic goes through a NAT Gateway**
+* For inter-VPC communication, routes point to VPC Peering or Transit Gateway.
+
+IPV6 ROUTING
+* IPV6 routes are seperate but in the same route table. 
+* add a route to ::/0 pointing to an Internet Gateway (IGW)
+* IPv6 is globally routable, so NAT is not used. Instead, security relies on Security Groups and Network ACLs.
+* for outbound only ipv6 traffic use Egress-Only Internet Gateway (EOIGW)
+
+QUESTION
+What Happens When Two Resources Access Internet Simultaneously
+Both resources send traffic to the NAT Gateway.
+The NAT Gateway performs Network Address Translation:
+
+It maps each private IP and port combination to the public Elastic IP with a unique port.
+This is called Port Address Translation (PAT).
+
+So, even though the public-facing IP is the same (the EIP), the NAT Gateway keeps track of sessions internally using port numbers.
