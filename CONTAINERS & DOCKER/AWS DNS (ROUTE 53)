@@ -1,0 +1,35 @@
+AMAZON ROUTE 53
+
+Amazon Route 53 is AWS managed DNS service.
+* it is highly available, scalable and fully managed.
+Route 53 acts as an authoritative DNS, meaning you control DNS records for your domains (add, update, delete).
+Provides health checks to monitor resources and reroute traffic if a server fails
+Integrated with AWS to manage traffic flow to resources like EC2, load balancers, etc.
+Lets you buy and manage domain names (like GoDaddy or Cloudflare).
+
+
+ROUTE54 HOSTED ZONES
+A Hosted Zone in Route 53 is like a container that stores all DNS records for a domain and its subdomains. It tells Route 53 how to route traffic.
+Hosted zones define whether traffic goes to the public web or stays internal within AWS VPCs.
+A public hosted zone routes traffic on the internet, while a private hosted zone routes traffic within AWS VPCs.
+
+Why would you use a private hosted zone instead of a public one?
+A3: To keep DNS resolution internal to your VPC for security and isolation, ensuring internal services aren’t exposed to the internet.
+
+DNS 
+DNS (Domain Name System) is the system that translates human-friendly domain names (like google.com) into machine-friendly IP addresses (like 172.217.18.36). This translation is essential because computers communicate using IP addresses, not names.
+DNS uses hierarchical structure: Top-Level Domain (TLD): .com, .org, .net
+Second-Level Domain: example.com
+Subdomain: www.example.com or api.example.com
+
+
+What happens if DNS fails?
+If DNS fails, users cannot access websites using domain names because the system cannot resolve them to IP addresses.
+
+DNS TERMINOLOGIES:
+1) Domain registrar: a service where you buy and register domain (eg GoDaddy, AWS Route53 etc)'
+2) DNS Record:Instructions for your domain that tell the internet where to send traffic
+3) Zone File: A directory that contains all DNS records for a domain.
+4) Nameserver: The server that resolves DNS queries and decides if the answer is authoritative. it is where your domain is hosted.
+5) TLD (Top-Level Domain): The highest level in DNS hierarchy, like .com, .org, .gov.
+6) SLD (Second-Level Domain): The part you register, like amazon in amazon.com.
