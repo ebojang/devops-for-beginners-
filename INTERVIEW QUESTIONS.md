@@ -161,3 +161,30 @@ To allow secure, internal communication between departmental VPCs (like Sales an
 
 46) **If communication between two peered VPCs isn’t working, what are the two most likely configuration issues?**
 Either the **route tables** haven’t been updated properly, or the VPCs have **overlapping CIDR ranges** preventing the peering connection.
+
+47) What is Amazon Route 53 primarily used for?
+It is AWS’s managed DNS service used to route internet traffic to AWS resources and manage domain names.
+
+48)  Why is Route 53 called “Route 53”?
+ Because DNS queries use port 53, and the service name is a reference to that port.
+
+
+49) What does it mean that Route 53 is an “authoritative DNS”?
+ It means customers have full control over DNS records for their domains, allowing them to add, update, or delete entries.
+
+50) How does Route 53 ensure high availability for DNS services?
+A4: It offers a 100% SLA for availability and uses health checks to automatically reroute traffic if a resource becomes unhealthy.
+
+51) What is the difference between an authoritative DNS server and a recursive DNS resolver?
+Authoritative DNS Server: Stores and provides the actual DNS records for a domain. It gives definitive answers about domain names because it owns the data.
+Recursive DNS Resolver: Acts as an intermediary that queries multiple DNS servers on behalf of the client until it finds the answer. It does not store original records but caches responses for faster future lookups.
+
+52) Explain what a zone file is and why it is important in DNS.
+A zone file is a text file that contains all the DNS records for a specific domain, such as A, AAAA, CNAME, MX, and NS records. It acts as a directory for the domain, ensuring that DNS queries are resolved correctly. Without a properly configured zone file, the domain cannot be mapped to its resources, leading to resolution failures.
+
+
+
+
+
+
+
