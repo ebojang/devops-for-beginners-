@@ -8,7 +8,7 @@ Integrated with AWS to manage traffic flow to resources like EC2, load balancers
 Lets you buy and manage domain names (like GoDaddy or Cloudflare).
 
 
-ROUTE54 HOSTED ZONES
+ROUTE53 HOSTED ZONES
 A Hosted Zone in Route 53 is like a container that stores all DNS records for a domain and its subdomains. It tells Route 53 how to route traffic.
 Hosted zones define whether traffic goes to the public web or stays internal within AWS VPCs.
 A public hosted zone routes traffic on the internet, while a private hosted zone routes traffic within AWS VPCs.
@@ -33,3 +33,27 @@ DNS TERMINOLOGIES:
 4) Nameserver: The server that resolves DNS queries and decides if the answer is authoritative. it is where your domain is hosted.
 5) TLD (Top-Level Domain): The highest level in DNS hierarchy, like .com, .org, .gov.
 6) SLD (Second-Level Domain): The part you register, like amazon in amazon.com.
+
+CNAME VS ALIAS 
+Cname: maps an alis domain name to a canonical (true) domain name. example: www.ebojang.com -> ebojang.com
+note: cname only works for subdomains, not the root domain. they are commonly used for pointing www or other subdomains to another domain.
+ALIAS: points a hostname to an AWS resource. it is often implemented by DNS providers as a workaround 
+
+
+ROUTE53: ROUTING POLICIES 
+Routing policies in Amazon Route 53 define how DNS responds to queries. They don’t actually route traffic like a load balancer; they just tell DNS which IP or resource to return when someone looks up your domain.
+
+Types of ROUTE53 routing policies:
+1) simple routing - always returns the same ip address for a domain.
+2) Weighted routing - distributes traffic based on weights (eg 70% to server A, 30% to server B). useful for testing or gradual migrations.
+3) Failover routing: if primary routing fails, traffic goes to a backup
+4) Latency-based routing - sends users to the server that responds fastest 
+
+
+
+
+
+
+
+
+
