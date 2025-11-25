@@ -1,26 +1,10 @@
-1) what make you choose devops or why devops?
-2) what makes you want to apply to this company?
-3) tell me 3 strengths you have ? 
-4) what are your weakness? i find it difficult to say No, I tried to pick too many things at once. 
-5) what components we have in Kubernetes? ans control plane and data plane -  , kube scheduler, etc 
-6) what are some of the things you might find in a dockerfile? ans, from, work directory, copy, run, expose, cmd 
-7) what's the difference between containers and vms?
-8) difference between image and container?
-9) how do you reduce the size of your container image? ans:  multistage build, layer catching (combine run command into one)
-10) what is terraform and what it does? terraform is iac, with terraform you get the same output every time you run. 
-11) what is a typical terraform workflow?
-12) how will you typically structure your terraform code?
-13) what is a module in terraform?
-14) how do you pass your secrets securely into modules in terraform?
-15) how do you handle state file within a team as devop engineer?
-16) can you give me an example of a specific challenge i mightwork on? ask interviewer this question 
-17) what is load balancing and why it is important?
+11) what is load balancing and why it is important?
 	**Answer:** Load balancing distributes incoming network traffic across multiple servers to ensure no single server is overloaded. It helps improve application availability, reliability, and performance.
 	
-18) **How does an AWS Elastic Load Balancer (ELB) maintain high availability?**  
+12) **How does an AWS Elastic Load Balancer (ELB) maintain high availability?**  
 **Answer:** ELB constantly checks the health of registered EC2 instances. If an instance fails, ELB automatically routes traffic to healthy instances, keeping the application running smoothly.
 
-19) **What is the difference between a load balancer and a reverse proxy?**  
+13) **What is the difference between a load balancer and a reverse proxy?**  
 **Answer:** Both sit between users and servers, but a load balancer mainly distributes traffic evenly, while a reverse proxy can also perform advanced functions like caching, SSL termination, and content-based routing.
 
 4) **How does AWS Application Load Balancer (ALB) handle routing for microservices?**  
@@ -32,13 +16,15 @@
 6) **What happens when an EC2 instance behind an ELB becomes unhealthy?**  
 **Answer:** The ELB’s health checks detect the issue and stop routing traffic to that instance, redistributing requests to healthy ones automatically until the failed instance recovers.
 
-7) **What is a target group in an Application Load Balancer, and why is it important?**  
+7) How are services behind load balancer accessed in AWS?
+in AWS services behind a load balancer are accessed using it's DNA name and not the ip address. the reason is because elastic load balancers are designed to be highly available and scalable, so there underlying ip addresses can be changed. The DNS name always resolves to the current set of ips for the load balancer.
+8) **What is a target group in an Application Load Balancer, and why is it important?**  
 **A:** A target group is a collection of resources (like EC2 instances, ECS tasks, or Lambda functions) that receive traffic from the Application Load Balancer. It’s important because it allows the ALB to route requests efficiently and perform health checks on each resource, ensuring traffic is only sent to healthy targets.
 
-8) What is the main purpose of an SSL/TLS certificate?  
+9) What is the main purpose of an SSL/TLS certificate?  
  The main purpose is to **encrypt data in transit** between a client (like a web browser) and a server, ensuring that no one can intercept or read the transmitted information.
 
-9) **What parameters can you configure in an Auto Scaling Group, and why are they important?**   You can configure **minimum**, **desired**, and **maximum** instance counts.
+10) **What parameters can you configure in an Auto Scaling Group, and why are they important?**   You can configure **minimum**, **desired**, and **maximum** instance counts.
 - _Minimum_ ensures baseline availability.
 - _Desired_ defines the target number of instances.
 - _Maximum_ prevents excessive scaling and cost overruns.  
@@ -178,29 +164,17 @@ To allow secure, internal communication between departmental VPCs (like Sales an
 46) **If communication between two peered VPCs isn’t working, what are the two most likely configuration issues?**
 Either the **route tables** haven’t been updated properly, or the VPCs have **overlapping CIDR ranges** preventing the peering connection.
 
-47) What is Amazon Route 53 primarily used for?
-It is AWS’s managed DNS service used to route internet traffic to AWS resources and manage domain names.
 
-48)  Why is Route 53 called “Route 53”?
- Because DNS queries use port 53, and the service name is a reference to that port.
+47) What Happens When Two Resources Access Internet Simultaneously
+Both resources send traffic to the NAT Gateway.
+The NAT Gateway performs Network Address Translation:
+It maps each private IP and port combination to the public Elastic IP with a unique port.
+This is called Port Address Translation (PAT).
+So, even though the public-facing IP is the same (the EIP), the NAT Gateway keeps track of sessions internally using port numbers.
 
-
-49) What does it mean that Route 53 is an “authoritative DNS”?
- It means customers have full control over DNS records for their domains, allowing them to add, update, or delete entries.
-
-50) How does Route 53 ensure high availability for DNS services?
-A4: It offers a 100% SLA for availability and uses health checks to automatically reroute traffic if a resource becomes unhealthy.
-
-51) What is the difference between an authoritative DNS server and a recursive DNS resolver?
-Authoritative DNS Server: Stores and provides the actual DNS records for a domain. It gives definitive answers about domain names because it owns the data.
-Recursive DNS Resolver: Acts as an intermediary that queries multiple DNS servers on behalf of the client until it finds the answer. It does not store original records but caches responses for faster future lookups.
-
-52) Explain what a zone file is and why it is important in DNS.
-A zone file is a text file that contains all the DNS records for a specific domain, such as A, AAAA, CNAME, MX, and NS records. It acts as a directory for the domain, ensuring that DNS queries are resolved correctly. Without a properly configured zone file, the domain cannot be mapped to its resources, leading to resolution failures.
-
-
-
-
-
-
-
+48) What Happens When Two Resources Access Internet Simultaneously
+Both resources send traffic to the NAT Gateway.
+The NAT Gateway performs Network Address Translation:
+It maps each private IP and port combination to the public Elastic IP with a unique port.
+This is called Port Address Translation (PAT).
+So, even though the public-facing IP is the same (the EIP), the NAT Gateway keeps track of sessions internally using port numbers.

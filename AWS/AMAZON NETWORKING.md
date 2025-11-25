@@ -183,3 +183,44 @@ It maps each private IP and port combination to the public Elastic IP with a uni
 This is called Port Address Translation (PAT).
 
 So, even though the public-facing IP is the same (the EIP), the NAT Gateway keeps track of sessions internally using port numbers.
+
+
+DOMAIN REGISTRAR AND DOMAIN SERVICE 
+
+A **domain registrar** is where you purchase and maintain legal ownership of your domain name. A registrar is an organization authorized to sell and manage ownership of domain names. - It ensures that the domain is listed under your name in the global domain registry. EG Godaddy, cloudflare etc 
+
+DNS Service (DNS Hosting Provider) - is where you manage DNS records (A, CNAME, MX, etc.) that direct internet traffic for your domain.
+
+Think: **Registrar = ownership**, **DNS host = traffic direction**.
+
+The registrar is who you _buy_ your domain from and who keeps track of your ownership.  
+The DNS service is where you set the records that tell browsers “where to go” when someone types your domain.
+
+AMAZON CLOUDFRONT 
+Amazon **CloudFront** is AWS’s global **Content Delivery Network (CDN)**. Its main job is to make your applications load faster and work more efficiently for users all around the world.
+
+How Cloudfront works?
+Instead of every user request traveling all the way to your **origin server** (like an S3 bucket, an EC2 instance, or a load balancer), CloudFront stores **cached copies of your content** at **edge locations**.  
+These are data centers placed strategically around the world.
+
+Benefits of cloudfront 
+- Speed up content delivery
+- Reduce load on your servers
+- Improve the user experience
+- Add powerful layers of security
+
+
+Cloudfront origins:
+In CloudFront, an **origin** is the place where **CloudFront fetches** your content before delivering it to users through its global edge network. Think of the origin as the “source” of your files or data.
+
+==2 main types of origins cloudfront supports:==
+1) S3 Bucket origins:Amazon S3 is one of the most popular origins for CloudFront—especially for **static content** like:
+- Images, videos, CSS/JS filrs, downloads, static websites
+-**Security: OAC (Origin Access Control)** - - Your S3 bucket **cannot be accessed directly** from the internet
+- Only CloudFront is allowed to read or write objects
+- This prevents bypassing CloudFront security and caching
+**CloudFront as Ingress** - can also be set up to **upload files to S3**.
+
+1) Custom Origins (HTTP-based Backends)
+A Custom Origin is any server that responds over **HTTP or HTTPS**, such as:
+ALB, EC2, On premises server and any http backend 
