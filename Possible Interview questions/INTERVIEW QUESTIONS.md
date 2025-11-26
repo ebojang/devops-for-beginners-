@@ -178,3 +178,7 @@ The NAT Gateway performs Network Address Translation:
 It maps each private IP and port combination to the public Elastic IP with a unique port.
 This is called Port Address Translation (PAT).
 So, even though the public-facing IP is the same (the EIP), the NAT Gateway keeps track of sessions internally using port numbers.
+
+49) What components do you need for your resources in the vpc to get access to the internet?
+50) what is  the difference between stateful firewalls and stateless firewalls? stateful firewall essentially is just a security group and a stateless firewall is a NACL, Network Access Control List, NACL. 
+
