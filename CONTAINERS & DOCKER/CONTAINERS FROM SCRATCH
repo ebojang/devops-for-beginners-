@@ -1,0 +1,96 @@
+Containers from first principle:
+
+
+2. First Question: How Do I Run This App Normally?
+Before Docker. Before containers. Before cloud. Before base images.
+We MUST know how the app runs on a normal computer. The goal is to find the spps entrypoint command.
+
+what is an entry point of an app?
+An entry point is the starting point where the program begins executions. It is basically the fist piece of code that runs when you launch the app. 
+it tells the system start running the app from here 
+Example of entry point in python
+If you run python app.py, then app.py is the entry point. In larger projects, this might be:
+manage.py (Django)
+main.py or app.py (Flask)
+
+Note:
+Phython is is heavy and have lots of dependencies compared to jave or golang. 
+
+Also, as an engineer, first check what language the app is written and this aids in finding the entry point 
+
+HOW DOES ENTRY POINT ON YOUR LOCAL PC LINKS TO DOCKER ENTRYPOINT/CMD?
+Docker has a special thing called the entrypoint or cmd. It runs the SAME command you used locally, but inside the container.
+examples :
+CMD ["python", "app.py"]
+CMD ["node", "index.js"]
+
+WHST IS A CONTAINER?
+A container is a lightweight, portable environment that packages an application and all it dependencies into one unit. 
+It has its own filesystem (its own little folder world)
+It has its own network (its own little IP inside your machine)
+It runs one app really well
+
+WHAT DO WE NEED TO CREATE A CONTAINER ?
+Dockerfile- 
+in dockerfile you  need a base image:
+in every container, you need 4 things for it to run:
+* base image * dependencies  * run commands  and source code
+
+1) example of base images :
+Python app → python:3.12-slim
+Node app → node:20-alpine
+Go app → golang:1.22 or scratch (for pros)
+
+Rule: you choose your base image depending on the language the app needs.
+
+2) Dependencies
+ask yourself what does my app needs in its new apartment AKA which files are essential for the app to function/run
+In apps:
+source code
+requirements.txt
+package.json
+EXAMPLE PYTHON APP NEEDS:
+COPY requirements.txt .
+COPY app.py .
+
+The run command in your dockerfile install your dependencies 
+example python app uses RUN pip install --no-cache-dir -r requirements.txt
+note:
+the command --no-cache-dir - caches your requirement.txt once, install, it won't go through again when re-running 
+Node uses: RUN npm install 
+NOTE:
+EXPOSE 5000 is on the dockerfile for just documentation. without it, your app will still be able to run.
+
+
+Wjhat is the difference between RUN, CMD AND ENTRYPOINT?
+1) RUN- executes commands at build time when creating a docker image. installs software or sets up the environment inside the image
+2) CMD- provides a deafult arguments for the container when it starts. Runs when you start the container unless overridden by a command in docker run.
+3) ENTRYPOINT -  IS ALWAYS THE STARTING PROGRAMME . EXAMPLE ENTRYPOINT sets python3 as the main command
+
+DOCKERFILE TEMPLATE 
+# 1. Base Image
+FROM <language>:<version>
+
+# 2. Working directory
+WORKDIR /app
+
+# 3. Copy dependency files first
+COPY <deps> .
+
+# 4. Install dependencies
+RUN <install command>
+
+# 5. Copy the rest
+COPY . .
+
+# 6. Expose (optional)
+EXPOSE <port>
+
+# 7. Run the app
+CMD ["<runtime>", "<main file>"]
+
+NOTE:
+Each line in a dockerfile cretaes a new layer.
+when you run a docker file multiple times and a line or layer has not been changes, docker caches or reuses it. this makes the buildup quick and faster.
+
+
