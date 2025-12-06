@@ -42,9 +42,13 @@ Node app → node:20-alpine
 Go app → golang:1.22 or scratch (for pros)
 
 Rule: you choose your base image depending on the language the app needs.
+2) Copying your application code = recipe
+This is the step where you copy your project's source code (your app) into the Docker image. This put your application files (code, config) inside the container.
+this is essential because your container needs your code without copying the code, your image will only have dependencies but nothing to run
 
-2) Dependencies
+3) Dependencies = ingredients + tools
 ask yourself what does my app needs in its new apartment AKA which files are essential for the app to function/run
+Dependencies are software components your application needs in order to run.
 In apps:
 source code
 requirements.txt
