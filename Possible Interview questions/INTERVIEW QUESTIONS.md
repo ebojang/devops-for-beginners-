@@ -180,5 +180,12 @@ This is called Port Address Translation (PAT).
 So, even though the public-facing IP is the same (the EIP), the NAT Gateway keeps track of sessions internally using port numbers.
 
 49) What components do you need for your resources in the vpc to get access to the internet?
-50) what is  the difference between stateful firewalls and stateless firewalls? stateful firewall essentially is just a security group and a stateless firewall is a NACL, Network Access Control List, NACL. 
+50) what is  the difference between stateful firewalls and stateless firewalls? stateful firewall essentially is just a security group and a stateless firewall is a NACL, Network Access Control List, NACL.
 
+51) how do you work independently with less or no supervision?
+52) read ticket first, understanding ticket> identify unknown > documentation > 
+53) What does a successful engineer look like on this team after 6 months?
+54) What’s your approach to knowledge sharing across the team?
+i'm someone who loves running demos etcc...
+
+55) What’s one thing the team wishes they improved last year, culturally or technically?
