@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud security.md",
+                "file": "CONTAINERS & DOCKER/Container & Docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cloud security"
+              "title": "Container & Docker"
+            }
+          },
+          {
+            "id": "65423967d5be3795",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docker in prod.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Docker in prod"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -198,10 +212,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ee8085f4a0957cbe",
+  "active": "65423967d5be3795",
   "lastOpenFiles": [
+    "CONTAINERS & DOCKER/Container & Docker.md",
+    "Docker in prod.md",
+    "CONTAINERS & DOCKER/create simple web application to Dockerise.md",
+    "CONTAINERS & DOCKER/Docker Networking Concepts.md",
+    "CONTAINERS & DOCKER/DOCKER REGISTRIES.md",
+    "CONTAINERS & DOCKER/DOCKERFILE.md",
+    "CONTAINERS & DOCKER/important docker commands.md",
+    "CONTAINERS & DOCKER/CODERCO CONTAINER CHALLENGE.md",
+    "AWS/CONTAINERS ON AWS.md",
+    "AWS/AWS STORAGE.md",
     "AWS/AWS .md",
-    "Cloud security.md",
+    "CONTAINERS & DOCKER/CONTAINERS FROM SCRATCH",
+    "AWS WELL ARHITECTURE.md",
     "Untitled",
     "AWS/CLOUD SECIRITY",
     "AWS/AMAZON NETWORKING.md",
@@ -218,7 +243,6 @@
     "Linux/LINUX DEBUGGING.md",
     "linux commands.md",
     "Linux/LINUX COMMAND CHEAT SHEET.md",
-    "CONTAINERS & DOCKER/important docker commands.md",
     "Linux/Pasted image 20250531171209.png",
     "Linux/Pasted image 20250531172850.png",
     "Linux/Pasted image 20250531171150.png",
@@ -227,14 +251,6 @@
     "Linux/LINUX FUNDAMENTALS.md",
     "Networking in DevOps/COMMON NETWORK ISSUES.md",
     "ERROR DIAGNOSTICS.md",
-    "GIT/GIT.md",
-    "CONTAINERS & DOCKER/DOCKERFILE.md",
-    "CONTAINERS & DOCKER/DOCKER REGISTRIES.md",
-    "CONTAINERS & DOCKER/Docker Networking Concepts.md",
-    "CONTAINERS & DOCKER/create simple web application to Dockerise.md",
-    "CONTAINERS & DOCKER/Container & Docker.md",
-    "CONTAINERS & DOCKER/CODERCO CONTAINER CHALLENGE.md",
-    "Bash/VARIABLES.md",
     "Untitled 1",
     "Possible Interview questions",
     "CONTAINERS & DOCKER/Docker Inspect Container",
@@ -242,7 +258,6 @@
     "DEVOPS PROJECTS",
     "CONTAINERS & DOCKER",
     "Untitled.canvas",
-    "Networking in DevOps",
-    "GIT"
+    "Networking in DevOps"
   ]
 }
