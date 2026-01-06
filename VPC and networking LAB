@@ -1,0 +1,86 @@
+Assignment 1 — VPC & Networking (AWS)
+A full custom network built from scratch to learn the fundamentals of cloud networking, routing, and segmentation.
+🎯 Objective
+Create a custom VPC with one public and one private subnet, configure routing for internet access, and deploy EC2 instances across them.
+
+🧭 What You’ll Build
+
+VPC (e.g. 10.0.0.0/16)
+Subnets: one public (10.0.1.0/24) and one private (10.0.2.0/24)
+Internet connectivity: IGW + NAT Gateway
+Route tables wired correctly
+EC2 instances in each subnet
+Security groups for least-privilege access
+(Bonus) Bastion host and CloudWatch monitoring
+
+
+🛠️ Step-by-Step (AWS Console)
+1) Create the VPC & Subnets
+
+VPC → Create VPC
+
+Name: assignment1-vpc
+CIDR: 10.0.0.0/16
+
+
+Subnets → Create two subnets (same AZ)
+
+Public: 10.0.1.0/24 (Name: public-subnet-a)
+Private: 10.0.2.0/24 (Name: private-subnet-a)
+
+
+Public Subnet → Edit subnet settings → Enable auto-assign public IPv4
+
+2) Internet Access
+
+Internet Gateway → Create IGW (assignment1-igw) → Attach to assignment1-vpc
+Elastic IP → Allocate new address
+NAT Gateway → Create in public subnet, attach the Elastic IP
+
+3) Route Tables
+
+Public Route Table (public-rt)
+Associate with public subnet
+Add route: 0.0.0.0/0 → Internet Gateway
+
+
+Private Route Table (private-rt)
+Associate with private subnet
+Add route: 0.0.0.0/0 → NAT Gateway
+
+
+
+4) Security Groups
+
+Public EC2 SG (sg-public)
+Inbound:
+SSH (22) from your IP only
+HTTP (80) from your IP (or 0.0.0.0/0 if you’ll host a test web page)
+Outbound: allow all
+
+Private EC2 SG (sg-private)
+Inbound:
+SSH (22) from sg-public (reference the SG)
+Outbound: allow all
+
+
+
+5) EC2 Instances
+
+Public EC2
+
+AMI: Amazon Linux 2 / latest
+Subnet: public-subnet-a
+Auto-assign public IP: Enabled
+SG: sg-public
+User data (optional) to serve a simple page:
+Shell#!/bin/bashyum update -yyum install -y httpdecho "Hello from Public EC2" > /var/www/html/index.htmlsystemctl enable httpdsystemctl start httpdShow more lines
+
+
+
+Private EC2
+
+AMI: Amazon Linux 2 / latest
+Subnet: private-subnet-a
+Auto-assign public IP: Disabled
+SG: sg-private
