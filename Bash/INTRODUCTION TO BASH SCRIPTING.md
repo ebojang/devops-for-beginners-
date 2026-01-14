@@ -24,6 +24,21 @@ example touch my-first-script.sh
     
 - It tells the computer to use Bash to run the script.
 -the path after the !  /bin/bash represents the path to the interpreter
+
+VIM EDITOR 
+Insert mode allows you to edit file, add test or remove text
+
+To copy text in vim or bash, move the cursor to the intended line and type on the yy on the keyboard.
+to paste : move cursor to the line you want to paste and press p
+to save : use upercase ZZ
+To delete letter: move cursor to the letter and type x
+to delete: move a cursor to the line and moce dd
+to delete 3 lines from the current line : d3d
+undo: type u 
+to redo changes: ctrl r 
+to find string: run /"string name or word " or example /genius
+ ?"string" finds the string and search upwards 
+
 #### Basic Concepts
 
 - **Variables**:
