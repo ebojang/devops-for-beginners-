@@ -1,3 +1,17 @@
+
+Working with the linux shell
+symbol to represent home directory? tilda (~)
+user home directory by default is represented as : /home
+
+Command types 
+* internal or Built-in commands -echo, cd pwd, set e.t.c
+* External commands : are binary programmes or scripts which are usually located in a distinct file in a system.mv, date, uptime, cp, uptime e.t.c 
+
+To determine if a command is internal or external use ==type== command :
+example: type echo, type mv, type date 
+
+Basic Linux Commands:
+
 FILE OPERATIONS 
 **Ls  (list directory) - view the content of a directory 
 ls -l shows a detailed list of files in a long format

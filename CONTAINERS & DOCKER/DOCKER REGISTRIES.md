@@ -3,17 +3,22 @@
 - A **Docker Registry** is like an online library for Docker images (Central storage and distribution hub for docker images).
 - It stores, manages, and distributes your images.
 - Without a registry, your images only exist locally.
+-
 
+What is the difference between ECR and dockerhub?
 ## Types of Registries
 1. **Public Registries**
     - Example: **Docker Hub**
-    - Anyone can access or share images.  
+    - Anyone can access or share images (public repository).  
     - Great for open-source use (e.g., pulling a MySQL image).   
 2. **Private Registries**
     - Example: **AWS Elastic Container Registry (ECR)**
-    - Access is restricted.
-    - Used for sensitive or proprietary applications.
-    - You control who can see or use your images.
+    - ECR is private repository in nature. 
+    - Access is restricted hence ECR is secured.
+    - Used for sensitive or proprietary applications or good integration with other AWS services .
+    - You control who can see or use your images. organisations can integrate their IAM users with the private ECR repository.
+
+
 
 **Why Registries are Important in DevOps**
 - **Streamlined Deployment** – Push once, then deploy the same image across dev, test, and production. faster and reliable to rollout new features and updates.

@@ -25,6 +25,7 @@ echo "export PATH=$PATH:~/My_scripts" >> ~/.zshrc
 **ENVIRONMENT VARIABLES** 
 
 Environment variables are variables that are set in the environment and affects the  behaviour of processes on the system. They store configuration settings.
+variables are used to store information 
 $PATH environment variable tells the system where to look for executed files. 
 echo $PATH
 
@@ -49,3 +50,7 @@ Provide valuable information about the system,user and runtime environment
 #!/bin/bash
 
 echo "username: $LOGNAME"
+
+
+TO KNOW THE EXACT version of kernel running on your system, run:
+$ uname -r

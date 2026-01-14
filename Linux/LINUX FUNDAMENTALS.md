@@ -4,12 +4,23 @@ Linux benefits
 * **security** - permission and user features alongside regular updates help keep system secure from malware and vulnerabilities. 
 * customizability 
 * reliability 
-**
+
+Working with the linux shell
+symbol to represent home directory? tilda (~)
+user home directory by default is represented as : /home
+
+Command types 
+* internal or Built-in commands -echo, cd pwd, set e.t.c
+* External commands : are binary programmes or scripts which are usually located in a distinct file in a system.mv, date, uptime, cp, uptime e.t.c 
+
+To determine if a command is internal or external use ==type== command :
+example: type echo, type mv, type date 
+
+Basic Linux Commands:
+
 ==**POPULAR LINUX COMMANDS== 
 Linux file system directories 
-**Ls  (list directory) - view the content of a directory 
-ls -l shows a detailed list of files in a long format
-ls -R list directories recursively. eg devops/cloud/support
+**
 devops:
 cloud
 ./cloud:
@@ -21,12 +32,106 @@ support
 - `-` one dash informs the system that we will pass one letter argument, like 'l'
 - `--` two dashes means that argument will contain more than one letter. Most commonly it will be an english word.
 
+**FILE TYPES IN LINUX** 
+1) Regular files : images, scripts, configurstoion /data files
+2) Directory: type of file that store other files within . eg home directory
+3) special files: hav e sub file types
+* character files: 
+* block files: represent block devices .these are located under /dev 
+* links 
+* socket: enables communication between two processes 
+* named pipes
+
+HOW TO IDENTIFY FILE TYPE IN LINUX
+$ file /home/ebrima or $ file (filename)
+
+
+==Filesystem Hierarchy in Linux;==
+* /opt : is the path where all 3rd programmes are installed
+* /mnt : is used to mount filesystem temporarily 
+* /tmp ; is used to store temporary data
+* /media : all external media is mounted on /media . example usb disk
+* /etc : stores most of configuration files in linux 
+* /var : is where logs can be found 
+
+==LINUX BOOT PROCESS== 
+1) BIOS POST
+2) Boot Loader 
+3) kernel initialisation
+4) Init process (systemd): brings linux host to a usable state.
+
+
+ **what is the init process used by this system?**
+ $ sudo ls -l /sbin/init 
+result: lrwxrwxrwx 1 root root 22 Jun  4  2025 /sbin/init -> ../lib/systemd/systemd
+
+**Viewing file sizes in Linux**
+run du command. disk usage is a command used to inspect size of a file. 
+1) $ du -sk (filename) : shows the size of the directory in kilo bytes
+2) $ du  -sh test.txt : prints the size in human readable format
+3) $ ls -lh test.txt 
+
+
+**ARCHIVING FILES** 
+tar -cf is the command use to archive data 
+tar is abbreviation for tape archive 
+
+$tar -c is used to create and archive 
+$ tar -cf : is used to specify the name of the tar file  to be created (test.tar) followed by the name of the file or directories to be created.
+
+==TO VIEW CONTENT OF ARCHIVE FILES:==
+$ tar -tf (followed by the archive file or tar file) test.tar
+
+ ==to EXTRACT ARCHIVE FILE:==
+ **$tar -xf** (archive file name) test.tar
+ 
+ **to compress file: to reduce size** 
+ $ tar -zcf
+run following commands to compress 
+$ bzip2 test.img
+$ gzip test.img
+xz test.img 
+
+TO UNCOMPRESS or extract 
+$bunzip2 test.img
+$gunzip test.img
+$ unxz test.img 
+$ du -sh test.img.bz2
+
+**SEARCHING FOR FILES AND DIRECTORIES** 
+==$ locate== (filename) example $ locate test.txt 
+This will return all paths matching the pattern 
+
+Alternatively, use the find command to search for a file
+$ find (followed by the file path ) -name (filename) example 
+$ find /home/ebrim -name test.txt 
+use grep command 
+grep (word ) (filename)
+$ grep genius test.txt 
+grep command is case sensitive 
+use grep -i 
+to search for a word or pattern recursively:
+grep-r "genius" file path 
+
+**redirect output** 
+cat missing_file 2> /dev/null
+error won't be printed out  
+ 
+
+
+
+
 ==**SORTING FILES== 
+Ls  (list directory) - view the content of a directory 
+ls -l shows a detailed list of files in a long format
+ls -a: list all files including hidden
+ls -R list directories recursively. eg devops/cloud/support
 sorting files by time. Run ls -ltu or ltc
 sort files by size:
 ls -s or ls -lS
 ls -lS - sort files by size , largest are going first
-
+ls -lt : long list files in order created 
+ls -ltr : long list files in the reverse order created
 ==**Argument human readable or better -h**== 
  This argument is `--human-readable` or -h
  ls -lh  list directory contents with human-readable file sizes.
@@ -45,7 +150,8 @@ ls -lSh or ls -lh
 `cd parentdir/childdir023` .
 - `cd ../../../var/log/nginx`
 - `cd /var/log/nginx`
-
+Protip:
+Pushd /popd command : this command remembers current working directory before changing directory to the to the command specified in thecommand argument .
 **Pwd (print/ present working directory)** – shows your current working directory 
 touch -  allows you to create new empty files.
 
@@ -78,6 +184,10 @@ to view directory content with space name : **cat "my dev folder"**
 
 **==rmdir -r==** is used to remove directory that contain folders or files or that have content in them 
 **Touch**- is used to create an empty file. EG touch hello.txt   - a file name hello.txt has been created . it can also be used to update the time stamp of the existing file  :
+
+
+**Absolute and Relative Path**
+Absolute path: is a location of a file or directory starting from the root directory ~$ cd /home/ebrima/downloads
 
 
 **tree command** 
@@ -402,3 +512,39 @@ sys log- Contains all important information about the system and applications.
 auth.log - Contains information about authorizations. All user login attempts (with information if successful or not), logout, password changes, remote logins and use of `sudo`.
 kern.log - stores kernel messages 
 last.log - contains information about last login
+
+
+
+
+==LINUX PACKAGE MANAGEMENT INTRODUCTION==
+
+**What is a package?**
+A package is a compressed archive that contains all the file that are required by a particular software to run. 
+
+==What are package managers?==
+package managers are tools that automate the process of installing, updating , configuring and removing software packages.
+
+==#RPM PACKAGE MANAGER==
+is a package manger used in Red Hat Enterprise linux as well as other linux distributions.
+The file extension for packages managed by RPM is .rpm
+
+**RPM has 5 basic modes of operations:**
+1) installing:  run the following command; rpm -ivh (package name) example rpm -ivh telnet.rpm
+2) uninstalling: $ rpm -e telnet.rpm
+3) upgrade: $ rmp -Uvh telnet.rpm
+4) query; $ rpm -q telnet.rpm
+5) veryfying: rpm -Vf <path to file>
+
+to confirm how many software repositories are configures for yum package manger?
+$ sudo yum repolist
+
+DEBIAN-BASED PACKAGE MANAGERS 
+1)  debian package (dpkg):
+* install /upgrade: $ dpkg -i (package name) eg telnet.deb
+* uinstalling $ dpkg -r telnet.deb
+* list: $ dpkg -l telnet
+* status: $dpkg -s telnet
+* verifying: $dpkg -p <file path>*
+
+2) Advanced Package Tool (apt)
+

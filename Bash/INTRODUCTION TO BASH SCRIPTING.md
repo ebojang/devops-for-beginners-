@@ -2,6 +2,13 @@
 **what is bash scripting?**
 Bash is a command line tool to interact with your computer. Bash is also a shell
 A shell allows us to enter a command and presents us with a result of those commands as an output.
+
+TO CHANGE DEFAULT SHELL?
+use command chsh
+
+Set Alias on bash?
+$ alias dt=date
+
 Bash script: A file containing a series of commands you want the computer to execute automatically.
 
 **Importance of bash?**
