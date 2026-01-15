@@ -10,6 +10,10 @@ Set Alias on bash?
 $ alias dt=date
 
 Bash script: A file containing a series of commands you want the computer to execute automatically.
+NOTE:
+When ever a command is run on an operating system, it looks into the paths configured in the path environment varialble to locate the executable or script for the command. 
+
+T
 
 **Importance of bash?**
 * automates task
