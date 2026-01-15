@@ -18,7 +18,13 @@ T
 **Importance of bash?**
 * automates task
 * manage systems 
-* boost efficiency *
+* boost efficiency
+
+  Executing a Script
+  run the following command to make a file executable:
+  $ chmod +x filename or path to the file /home/ebojang/test.sh
+  
+  
 
 **.sh** indicates that these are bash script .
 example touch my-first-script.sh 
