@@ -1,1 +1,14 @@
 
+NAME RESOLUTION 
+
+Every host has a DNS resolution configuration file at :
+$ /etc/resolv.conf
+
+DIG and nslookup can be used for dns resolution
+
+SWITCHING AND ROUTING IN LINUX 
+To configure a gateway on one system to reach other networks, run the command:
+$ ip route add 192.168.2.0/24 via  gateway at 192.168.1.1
+
+To route to any network outside of your network, run:
+$ ip route add 0.0.0.0 via ( default gateway router ip) 192.168.2.1 or ip route default via 192.168.2.1
