@@ -42,7 +42,6 @@ when executing script with parameters the values passed on the command line will
 echo "all parameters: $@"
 "
 
+NOTE:
 
-
-
-
+Desing your script for it to be repurposed. 
