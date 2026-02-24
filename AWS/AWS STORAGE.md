@@ -1,9 +1,11 @@
-
+Elastic Block Storage - BREks up data inot blocks and then stores those blocks as separate piecies, each with a unique identifier. 
 EBS VOLUME - virtual storage device that lives in your cloud and connect to your instance.
+NOTE:
+
 Amazon EBS volume is a durable. block -level storage device that you can attach to your instance.
 EBS volume can be used as  primary storage for data that requires frequent updates such as system drive for your data.
 EBS allows your instances to persist data, even after instance termination.
-EBS are bound to a specific availability zone.
+EBS are bound to a specific availability zone hence they will need to be in the same availability zone with the EC2 instance.
 
 AMAZON MACHINE IMAGE (AMI)
 
@@ -14,10 +16,28 @@ multiple instances can be launched with the same configuration, saving time and 
 
 AMAZON EFS - ELASTIC FILE SYSTEM 
 Elastic file system (EFS) - is a managed Network File System (NFS) that can be mounted on many EC2 instances.
+* EFS stores data in a hirachical structure of files and folders.
 * EFS with EC2 instances in multi Availability Zone
 * Highly available, scalable
-* EFS are expensive 
+* EFS are expensive
 
+  S3 - OBJECT STORAGE
+  Object  storage stores objects.
+  * objects are nothing more than files
+  * object storage do not have a folder structure. eg google drive- everything is in the same folder
+  * object storage great for storing logs and media files.
+  * object storage cannot be mounted 
+* object storage can handle two simultaneous AZ failures.
+  
+S3 STORAGE CLASSES
+
+1) S3 standard-
+2) S3 standard IA classes (infrequent access) - it has a minimum duration charge of 90 days 
+S3 Glacier -Instant 
+* low cost option for rarely accessed data
+* However, it do have higher retrieval cost 
+
+  
 SCALABILITY AND HIGH AVAILABILITY 
 
 Vertical scalability means increasing the size of the instance.
